@@ -5,14 +5,16 @@ import math
 import CoalitionFormation
 import Comparison
 import datetime
+import Lower_bound
+import networkx as nx
 
 users=[]
 contents=[]
 tasks=[]
 
 def execute():
-    #user_nums=[100,200,300,400,500]
-    user_nums = [100]
+    user_nums=[100,200,300,400,500]
+    #user_nums = [100]
     task_num=30
 
     user_range=500
@@ -157,6 +159,12 @@ def execute():
         Random_cooperation_cost=Comparison.Random_cooperation(users,tasks)
         print('Random_cooperation algorithm finished!')
         '''
+
+        LB_graph=Lower_bound.create_LBgraph(tasks,users)
+        LB_flow=nx.network_simplex(LB_graph, demand='demand', capacity='capacity',
+                                                   weight='weight')
+        LB_cost=LB_flow[0]
+
         result_file.write('user number is %d\n'% user_num)
 
         result_file.write('CoalitionFormation\'s total participated user number is %d\n' % CF_participated_usernum)
@@ -169,6 +177,7 @@ def execute():
         #result_file.write('Random_cooperation\'s total cost is %d\n' % Random_cooperation_cost)
         # result_file.write('Non_Cooperation_greedy\'s total cost is %d\n'%totalcost_NCG)
         result_file.write('Range_greedy\'s total cost is %d\n' % Range_greedy_cost)
+        result_file.write('Lower bound is %d\n' % LB_cost)
 
         result_file.write('\n')
 

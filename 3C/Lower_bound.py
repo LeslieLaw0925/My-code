@@ -10,13 +10,13 @@ def create_LBgraph(tasks,users):
     for task in tasks:
         total_task_content+=task.output_block_num*task.content.block_size
 
-    LB_graph.add_node('source', demand=0)
+    LB_graph.add_node('source', demand=-total_task_content)
     LB_graph.add_node('destination', demand=total_task_content)
 
     for task in tasks:
         task_node='task'+str(task.task_id)
-        LB_graph.add_node(task_node, demand=-1*task.output_block_num*task.content.block_size)
-        #LB_graph.add_node(task_node, demand=0)
+        #LB_graph.add_node(task_node, demand=-1*task.output_block_num*task.content.block_size)
+        LB_graph.add_node(task_node, demand=0)
         LB_graph.add_edge('source', task_node, capacity=task.output_block_num*task.content.block_size, weight=0, caching_user_cost=0,
                       computing_user_cost=0, relaying_user_cost=0)
 

@@ -1,65 +1,65 @@
 user number is 100
-CoalitionFormation's total participated user number is 49
-Initial coalitionFormation's total cost is 132324167387
-Non_cooperation's total cost is 348804785750
-CoalitionFormation's total cost is 109526485191
-Range_greedy's total cost is 326180590622
-Lower bound is 119770196010
+CoalitionFormation's total participated user number is 50
+Initial coalitionFormation's total cost is 141929688690
+Non_cooperation's total cost is 343421313892
+CoalitionFormation's total cost is 110832480925
+Range_greedy's total cost is 287229075236
+Lower bound is 110624430561
 
 
-Running time of CoalitionFormation is 18 second(s)
-Iteration number of CoalitionFormation is 204
+Running time of CoalitionFormation is 23 second(s)
+Iteration number of CoalitionFormation is 241
 
 
 user number is 200
-CoalitionFormation's total participated user number is 50
-Initial coalitionFormation's total cost is 110800024449
-Non_cooperation's total cost is 302750070664
-CoalitionFormation's total cost is 96677815009
-Range_greedy's total cost is 285398922192
-Lower bound is 114452307811
+CoalitionFormation's total participated user number is 53
+Initial coalitionFormation's total cost is 127236842938
+Non_cooperation's total cost is 311824342092
+CoalitionFormation's total cost is 104161703540
+Range_greedy's total cost is 292133334956
+Lower bound is 107261697238
 
 
-Running time of CoalitionFormation is 29 second(s)
-Iteration number of CoalitionFormation is 222
+Running time of CoalitionFormation is 46 second(s)
+Iteration number of CoalitionFormation is 305
 
 
 user number is 300
-CoalitionFormation's total participated user number is 54
-Initial coalitionFormation's total cost is 107478870166
-Non_cooperation's total cost is 311995908003
-CoalitionFormation's total cost is 93600031270
-Range_greedy's total cost is 292196347488
-Lower bound is 113989948633
+CoalitionFormation's total participated user number is 51
+Initial coalitionFormation's total cost is 114539105679
+Non_cooperation's total cost is 284500372203
+CoalitionFormation's total cost is 100412739706
+Range_greedy's total cost is 311662060889
+Lower bound is 105744383631
 
 
-Running time of CoalitionFormation is 43 second(s)
-Iteration number of CoalitionFormation is 278
+Running time of CoalitionFormation is 55 second(s)
+Iteration number of CoalitionFormation is 310
 
 
 user number is 400
-CoalitionFormation's total participated user number is 54
-Initial coalitionFormation's total cost is 103368766352
-Non_cooperation's total cost is 271411219179
-CoalitionFormation's total cost is 92428266968
-Range_greedy's total cost is 284908736011
-Lower bound is 113641091181
+CoalitionFormation's total participated user number is 50
+Initial coalitionFormation's total cost is 107895087202
+Non_cooperation's total cost is 281243822663
+CoalitionFormation's total cost is 98675792856
+Range_greedy's total cost is 297781053207
+Lower bound is 104780856464
 
 
-Running time of CoalitionFormation is 44 second(s)
-Iteration number of CoalitionFormation is 300
+Running time of CoalitionFormation is 64 second(s)
+Iteration number of CoalitionFormation is 297
 
 
 user number is 500
 CoalitionFormation's total participated user number is 52
-Initial coalitionFormation's total cost is 98097352342
-Non_cooperation's total cost is 285149734366
-CoalitionFormation's total cost is 89800429077
-Range_greedy's total cost is 264359248813
-Lower bound is 110038271284
+Initial coalitionFormation's total cost is 106101041377
+Non_cooperation's total cost is 227477125358
+CoalitionFormation's total cost is 97876401459
+Range_greedy's total cost is 298189192693
+Lower bound is 104780856464
 
 
-Running time of CoalitionFormation is 61 second(s)
-Iteration number of CoalitionFormation is 244
+Running time of CoalitionFormation is 89 second(s)
+Iteration number of CoalitionFormation is 298
 
 

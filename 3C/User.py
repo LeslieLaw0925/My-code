@@ -21,10 +21,10 @@ class User:
 
         self.CPU_energy_percycle =self.CPU_power/self.computation_capacity
         self.avalibleCooperators=[] #user的可达范围内的helper
+
         self.avalibleTasks=[] #user的可达范围内的task
         self.most_preferred_helper_id=None
         self.cached_content=np.random.randint(0,2,Content.content_num) #当前设备缓存的所有content
-        self.current_task_id = -1
 
     def initialize(self):
         self.avalibleCooperators.clear()   #user的可达范围内的helper
@@ -33,14 +33,18 @@ class User:
         self.current_load = rand.uniform(0, 0.5)  # percentage of occupied processing capacity
         self.idle_computation_capacity = (1 - self.current_load) * self.computation_capacity  # /Ghz idle computation capacity
         self.residual_CPU=self.idle_computation_capacity #用于解最优值
+
         self.download_cellular_data_rate = rand.uniform(5,20) * math.pow(10, 6)  # /Mbps 蜂窝网下行链路
         self.upload_cellular_data_rate = self.download_cellular_data_rate * rand.uniform(0, 0.5)  # /Mbps 蜂窝网上行链路
+        self.residual_download_cellular_data_rate = self.download_cellular_data_rate
+        self.residual_upload_cellular_data_rate = self.upload_cellular_data_rate
+
         self.flag=0
         self.D2D_bandwidth=rand.randint(1,5)*math.pow(10,6) #Mhz 带宽最大为20Mhz
         self.x_axis=rand.uniform(0,500)
         self.y_axis=rand.uniform(0,500)
         self.current_cost = 0
-
+        self.current_task_id = -1
 
     def InputCost(self,caching_user,input_size):
         if caching_user.user_id==self.user_id:
@@ -83,6 +87,9 @@ class User:
 
         return [outputCost,current_user_cost,relay_user_cost]
 
+    def transmission_datarate(self, caching_user):
+        return self.D2D_bandwidth * math.log2(1 + math.pow(10, caching_user.SNR / 10))
+
     def setAvalibleCooperators(self, user_range, users):
         for helper in users:
             if helper.user_id == self.user_id:
@@ -93,8 +100,9 @@ class User:
                 if distance < user_range:
                     self.avalibleCooperators.append(helper.user_id)
 
-    def transmission_datarate(self, caching_user):
-        return self.D2D_bandwidth * math.log2(1 + math.pow(10, caching_user.SNR / 10))
+        self.D2D_rate_of_Cooperators = [0 for i in range(0, len(users))]  # 新建user与可达范围内的helper的D2D rate
+
+
 
 
 

@@ -328,8 +328,10 @@ def removeUnused(task,current_flowdict,users):
     for u,v in residual_flowdict:
         u_id = re.sub('\D','', u)
         v_id = re.sub('\D','', v)
-        u_function = u.replace(u_id, '')
-        v_function = v.replace(v_id, '')
+        u_function = ''
+        v_function = ''
+        u_function = u_function.join(re.findall(r'[A-Za-z]', u))
+        v_function = v_function.join(re.findall(r'[A-Za-z]', v))
 
         '''
         flow_size = flowdict[u][v]

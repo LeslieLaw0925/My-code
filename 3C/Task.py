@@ -7,6 +7,7 @@ import User
 import MC_graph
 import copy
 import re
+import Comparison
 
 class Task:
     '''define a task'''
@@ -53,46 +54,78 @@ class Task:
             if users[user_id].cached_content[self.content.content_id]==1:
                 self.caching_users.append(user_id)
 
-
+    '''
     def Non_cooperation_initialize(self,joined_users,users):
-        min_cost = 0
-        min_cost_userid = -1
-
         for user_id in self.avalible_users:
             if user_id in joined_users:
                 continue
 
-            user = users[user_id]
-            content_size = self.output_block_num*self.content.block_size
+            if user_id in self.caching_users:
+                self.current_caching_users.append(user_id)
 
-            computing_cost = user.ComputingCost(content_size, self)
-            output_cost = user.OutputCost(user, content_size)
-            total_cost = computing_cost + output_cost[0]
+            self.current_avalible_users.append(user_id)
 
-            if user_id not in self.caching_users:
-                downloading_cost = user.DownloadingCost(content_size)
-                total_cost += downloading_cost
+            mc_graph = MC_graph.createMCgraph(self, self.current_caching_users, self.current_avalible_users, users)
 
-            if min_cost == 0 or total_cost < min_cost:
-                min_cost = total_cost
-                min_cost_userid = user_id
+            try:
+                current_flowDict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')  # 运行别的代码
+            except nx.exception.NetworkXUnfeasible :# 如果在try部份引发了'name'异常
+                continue
+            else:# 如果没有异常发生
+                self.current_flowdict = copy.deepcopy(current_flowDict)
+                self.current_mc_graph = copy.deepcopy(mc_graph)
+                joined_users.append(user_id)
 
+                users[user_id].current_task_id = self.task_id
 
-        joined_users.append(min_cost_userid)
+                # 记录每个task已经组过的coalition及其组成情况
+                self.record_UserHistory(self.current_avalible_users)
+                break
+    '''
+    def Initialize_cooperation(self,users):
+        mc_graph = Comparison.BruteGreedy_non_overlap_createMCgraph(self, self.caching_users, self.avalible_users, users)
+        task_flowdict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')
+        print(task_flowdict)
+        min_cost, flowdict = task_flowdict
+        modified_caching_members = []
+        modified_avalible_members = []
 
-        if min_cost_userid in self.caching_users:
-            self.current_caching_users.append(min_cost_userid)
+        residual_flowdict = sorted([(u, v) for u in flowdict for v in flowdict[u] if flowdict[u][v] > 0])
 
-        self.current_avalible_users.append(min_cost_userid)
+        # 筛选出有流量通过的边
+        for u,v in residual_flowdict:
+            u_id = re.sub('\D', '', u)
+            v_id = re.sub('\D', '', v)
+            u_function = ''
+            v_function=''
+            u_function=u_function.join(re.findall(r'[A-Za-z]', u))
+            v_function = v_function.join(re.findall(r'[A-Za-z]', v))
 
+            if u_function == 'caching' or u_function == 'computing' or u_function == 'relaying':
+                user_id = int(u_id)
+                users[user_id].current_task_id = self.task_id
+                if user_id not in modified_avalible_members:
+                    modified_avalible_members.append(user_id)
+                    if u_function == 'caching' and user_id not in modified_caching_members:
+                        modified_caching_members.append(user_id)
 
-        mc_graph = MC_graph.createMCgraph(self, self.current_caching_users, self.current_avalible_users, users)
-        current_flowDict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')
+            if v_function == 'caching' or v_function == 'computing' or v_function == 'relaying':
+                user_id = int(v_id)
+                users[user_id].current_task_id = self.task_id
+                if user_id not in modified_avalible_members:
+                    modified_avalible_members.append(user_id)
+                    if v_function == 'caching' and user_id not in modified_caching_members:
+                        modified_caching_members.append(user_id)
 
-        self.current_flowdict=copy.deepcopy(current_flowDict)
-        self.current_mc_graph=copy.deepcopy(mc_graph)
+        modified_graph = MC_graph.createMCgraph(self, modified_caching_members, modified_avalible_members, users)
+        modified_flowdict = nx.network_simplex(modified_graph, demand='demand', capacity='capacity', weight='weight')
 
-        users[min_cost_userid].current_task_id=self.task_id
+        # 记录task当前的coalition状况
+        self.current_flowdict = copy.deepcopy(modified_flowdict)
+        self.current_mc_graph = copy.deepcopy(modified_graph)
+
+        self.current_caching_users = copy.deepcopy(modified_caching_members)
+        self.current_avalible_users = copy.deepcopy(modified_avalible_members)
 
         # 记录每个task已经组过的coalition及其组成情况
         self.record_UserHistory(self.current_avalible_users)

@@ -4,6 +4,7 @@ import copy
 import itertools
 import operator
 import random as rand
+import MC_graph
 
 def Non_Cooperation_greedy(users,tasks):
     task_costs = []
@@ -144,9 +145,68 @@ def RangeGreedy(tasks,users):
 
     return total_cost
 
-BruteSolution_cost = 0
+overlap_BruteSolution_cost = 0
+non_overlap_BruteSolution_cost = 0
 COUNT=0
+overlap_brute_greedy_usernum=0
+non_overlap_brute_greedy_usernum=0
 
+def BruteGreedy(users, tasks):
+    global COUNT
+    global overlap_BruteSolution_cost
+    global overlap_brute_greedy_usernum
+    global non_overlap_BruteSolution_cost
+    global non_overlap_brute_greedy_usernum
+
+    task_ids=[i for i in range(0,len(tasks))]
+
+    for i in range(0,50):
+        rand.shuffle(task_ids)
+        print('task id list is,', task_ids)
+        print('the overlap_BruteSolution_cost is,', overlap_BruteSolution_cost)
+        print('the non_overlap_BruteSolution_cost is,', non_overlap_BruteSolution_cost)
+        overlap_total_cost=0
+        non_overlap_total_cost=0
+
+        for user in users:
+            user.current_task_id = -1
+            for helper_id in user.avalibleCooperators:
+                user.D2D_rate_of_Cooperators[helper_id] = user.transmission_datarate(users[helper_id])
+
+        for task_id in task_ids:
+            overlap_total_cost += BruteGreedy_SingelTask(task_id, users, tasks,'overlap')
+
+        if overlap_BruteSolution_cost == 0 or overlap_BruteSolution_cost > overlap_total_cost:
+            overlap_BruteSolution_cost = overlap_total_cost
+            overlap_brute_greedy_usernum = 0
+            for user in users:
+                if user.current_task_id != -1:
+                    overlap_brute_greedy_usernum += 1
+
+        print('the overlap_total_cost is,', overlap_total_cost)
+
+        for user in users:
+            user.current_task_id = -1
+
+        for task_id in task_ids:
+            non_overlap_total_cost += BruteGreedy_SingelTask(task_id, users, tasks,'non_overlap')
+
+        if non_overlap_BruteSolution_cost == 0 or non_overlap_BruteSolution_cost >= non_overlap_total_cost:
+            non_overlap_BruteSolution_cost = non_overlap_total_cost
+            non_overlap_brute_greedy_usernum = 0
+            for user in users:
+                if user.current_task_id != -1:
+                    non_overlap_brute_greedy_usernum += 1
+
+        print('the non_overlap_total_cost is,', non_overlap_total_cost)
+
+        for user in users:
+            user.residual_CPU = user.idle_computation_capacity
+            user.residual_download_cellular_data_rate = user.download_cellular_data_rate
+            user.residual_upload_cellular_data_rate = user.upload_cellular_data_rate
+
+
+'''
 def BruteGreedy(n, begin, end,users, tasks):
     global COUNT
     global BruteSolution_cost
@@ -158,6 +218,8 @@ def BruteGreedy(n, begin, end,users, tasks):
 
         for user in users:
             user.current_task_id =-1
+            for helper_id in user.avalibleCooperators:
+                user.D2D_rate_of_Cooperators[helper_id]=user.transmission_datarate(users[helper_id])
 
         for task_id in n:
             total_cost+=BruteGreedy_SingelTask(task_id,users,tasks)
@@ -171,6 +233,8 @@ def BruteGreedy(n, begin, end,users, tasks):
 
         for user in users:
             user.residual_CPU=user.idle_computation_capacity
+            user.residual_download_cellular_data_rate=user.download_cellular_data_rate
+            user.residual_upload_cellular_data_rate=user.upload_cellular_data_rate
 
         COUNT += 1
 
@@ -179,27 +243,277 @@ def BruteGreedy(n, begin, end,users, tasks):
 
     else:
         if COUNT<=50:
-            i = begin
+            #i = begin
+            i=end-1
 
             for num in range(begin, end):
                 n[num], n[i] = n[i], n[num]
 
-                BruteGreedy(n, begin + 1, end,users, tasks)
+                #BruteGreedy(n, begin + 1, end,users, tasks)
+                BruteGreedy(n, begin, end-1, users, tasks)
 
                 n[num], n[i] = n[i], n[num]
+'''
 
-
-def BruteGreedy_SingelTask(task_id,users,tasks):
+def BruteGreedy_SingelTask(task_id,users,tasks,ifoverlap):
     task=tasks[task_id]
+    #single_task_cost=0
 
-    mc_graph=BruteGreedy_createMCgraph(task,task.caching_users,task.avalible_users,users)
-    task_flowdict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')
-    single_task_cost=task_flowdict[0]
-    BruteGreedy_update(task, task_flowdict, users)
-    #print('task %d\'s cost is %d'%(task_id,single_task_cost))
+    if ifoverlap=='overlap':
+        mc_graph=BruteGreedy_createMCgraph(task,task.caching_users,task.avalible_users,users)
+        task_flowdict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')
+        single_task_cost=task_flowdict[0]
+        BruteGreedy_update(task, task_flowdict, users)
+    else:
+        mc_graph = BruteGreedy_non_overlap_createMCgraph(task, task.caching_users, task.avalible_users, users)
+        task_flowdict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')
+        single_task_cost = task_flowdict[0]
+        BruteGreedy_non_overlap_update(task,task_flowdict, users)
+
     return single_task_cost
 
+def BruteGreedy_non_overlap_createMCgraph(task,caching_members,avalible_members,users):
+    MC_graph = nx.DiGraph()
 
+    MC_graph.add_node('source', demand=-1 * task.output_block_num)
+
+    # 把caching nodes加入图中，并添加相应的source和caching node的边
+    for caching_user_id in caching_members:
+        if users[caching_user_id].current_task_id!=-1:
+            continue
+        caching_node = 'caching' + str(caching_user_id)
+        MC_graph.add_node(caching_node, demand=0)
+        MC_graph.add_edge('source', caching_node, capacity=task.output_block_num, weight=0, caching_user_cost=0,
+                          computing_user_cost=0, relaying_user_cost=0)
+
+    MC_graph.add_node('IOTplatform', demand=0)
+    MC_graph.add_edge('source', 'IOTplatform', capacity=task.output_block_num, weight=0, caching_user_cost=0,
+                      computing_user_cost=0, relaying_user_cost=0)
+
+    # 把computing nodes加入图中，并添加相应的caching nodes和computing nodes的边
+    for computing_user_id in avalible_members:
+        if users[computing_user_id].current_task_id!=-1:
+            continue
+        computing_node = 'computing' + str(computing_user_id)
+        MC_graph.add_node(computing_node, demand=0)
+        computing_cost = users[computing_user_id].ComputingCost(task.content.block_size, task)
+
+        downloading_capacity = int(
+            users[computing_user_id].download_cellular_data_rate / task.content.block_size)
+        downloading_cost = users[computing_user_id].DownloadingCost(task.content.block_size)  # 1 block 的能量
+        block_cost = downloading_cost + computing_cost
+        MC_graph.add_edge('IOTplatform', computing_node, capacity=downloading_capacity, weight=block_cost,
+                          caching_user_cost=0, computing_user_cost=block_cost, relaying_user_cost=0)
+
+        for caching_user_id in caching_members:
+            if users[caching_user_id].current_task_id != -1:
+                continue
+            if caching_user_id in users[computing_user_id].avalibleCooperators:
+                caching_node = 'caching' + str(caching_user_id)
+
+                input_capacity = int(users[computing_user_id].transmission_datarate(users[caching_user_id])/ task.content.block_size)
+                inputcost = users[computing_user_id].InputCost(users[caching_user_id], task.content.block_size)
+                block_cost = inputcost[0] + computing_cost
+                caching_user_cost = inputcost[2]
+                computing_user_cost = inputcost[1] + computing_cost
+                MC_graph.add_edge(caching_node, computing_node, capacity=input_capacity, weight=block_cost,
+                                  caching_user_cost=caching_user_cost, computing_user_cost=computing_user_cost,
+                                  relaying_user_cost=0)
+
+        # 增加辅助的computing node n'
+        virtual_computing_node = 'computing' + str(computing_user_id) + "'"
+        MC_graph.add_node(virtual_computing_node, demand=0)
+        computing_capacity = int(
+            users[computing_user_id].idle_computation_capacity / task.processing_density / task.content.block_size)
+        MC_graph.add_edge(computing_node, virtual_computing_node, capacity=computing_capacity, weight=0,
+                          caching_user_cost=0, computing_user_cost=0, relaying_user_cost=0)
+
+    MC_graph.add_node('destination', demand=task.output_block_num)
+    # 把relaying nodes加入图中，并添加相应的computing nodes和relaying nodes的边，以及relaying nodes和destination的边
+    for relaying_user_id in avalible_members:
+        if users[relaying_user_id].current_task_id != -1:
+            continue
+        relaying_node = 'relaying' + str(relaying_user_id)
+        MC_graph.add_node(relaying_node, demand=0)
+        uploading_capacity = int(users[relaying_user_id].upload_cellular_data_rate / task.content.block_size)
+        MC_graph.add_edge(relaying_node, 'destination', capacity=uploading_capacity, weight=0, caching_user_cost=0,
+                          computing_user_cost=0, relaying_user_cost=0)
+
+        for computing_user_id in avalible_members:
+            if users[computing_user_id].current_task_id != -1:
+                continue
+            if computing_user_id in users[relaying_user_id].avalibleCooperators:
+                computing_node = 'computing' + str(computing_user_id) + "'"
+
+                output_capacity = int(users[computing_user_id].transmission_datarate(users[relaying_user_id])/ task.content.block_size)
+
+                output_cost = users[computing_user_id].OutputCost(users[relaying_user_id], task.content.block_size)
+                block_cost = output_cost[0]
+                relaying_user_cost = output_cost[2]
+                computing_user_cost = output_cost[1]
+                MC_graph.add_edge(computing_node, relaying_node, capacity=output_capacity, weight=block_cost,
+                                  caching_user_cost=0, computing_user_cost=computing_user_cost,
+                                  relaying_user_cost=relaying_user_cost)
+
+    return MC_graph
+
+def BruteGreedy_non_overlap_update(task,current_flowdict,users):
+    min_cost, flowdict = current_flowdict
+    modified_caching_members = []
+    modified_avalible_members = []
+
+    residual_flowdict = sorted([(u, v) for u in flowdict for v in flowdict[u] if flowdict[u][v] > 0])
+
+    # 筛选出有流量通过的边
+    for u, v in residual_flowdict:
+        u_id = re.sub('\D', '', u)
+        v_id = re.sub('\D', '', v)
+        u_function = re.findall(r'[A-Za-z]', u)
+        v_function = re.findall(r'[A-Za-z]', v)
+
+        if u_function == 'caching' or u_function == 'computing' or u_function == 'relaying':
+            user_id = int(u_id)
+            users[user_id].current_task_id = 0
+            if user_id not in modified_avalible_members:
+                modified_avalible_members.append(user_id)
+                if u_function == 'caching' and user_id not in modified_caching_members:
+                    modified_caching_members.append(user_id)
+
+
+        if v_function == 'caching' or v_function == 'computing' or v_function == 'relaying':
+            user_id = int(v_id)
+            users[user_id].current_task_id = 0
+            if user_id not in modified_avalible_members:
+                modified_avalible_members.append(user_id)
+                if v_function == 'caching' and user_id not in modified_caching_members:
+                    modified_caching_members.append(user_id)
+
+
+def BruteGreedy_createMCgraph(task,caching_members,avalible_members,users):
+    MC_graph = nx.DiGraph()
+
+    MC_graph.add_node('source', demand=-1 * task.output_block_num)
+
+    # 把caching nodes加入图中，并添加相应的source和caching node的边
+    for caching_user_id in caching_members:
+        caching_node = 'caching' + str(caching_user_id)
+        MC_graph.add_node(caching_node, demand=0)
+        MC_graph.add_edge('source', caching_node, capacity=task.output_block_num, weight=0, caching_user_cost=0,
+                          computing_user_cost=0, relaying_user_cost=0)
+
+    MC_graph.add_node('IOTplatform', demand=0)
+    MC_graph.add_edge('source', 'IOTplatform', capacity=task.output_block_num, weight=0, caching_user_cost=0,
+                      computing_user_cost=0, relaying_user_cost=0)
+
+    # 把computing nodes加入图中，并添加相应的caching nodes和computing nodes的边
+    for computing_user_id in avalible_members:
+        computing_node = 'computing' + str(computing_user_id)
+        MC_graph.add_node(computing_node, demand=0)
+        computing_cost = users[computing_user_id].ComputingCost(task.content.block_size, task)
+
+        downloading_capacity = int(users[computing_user_id].residual_download_cellular_data_rate / task.content.block_size)
+        downloading_cost = users[computing_user_id].DownloadingCost(task.content.block_size)  # 1 block 的能量
+        block_cost = downloading_cost + computing_cost
+        MC_graph.add_edge('IOTplatform', computing_node, capacity=downloading_capacity, weight=block_cost,
+                          caching_user_cost=0, computing_user_cost=block_cost, relaying_user_cost=0)
+
+        for caching_user_id in caching_members:
+            if caching_user_id in users[computing_user_id].avalibleCooperators:
+                caching_node = 'caching' + str(caching_user_id)
+
+                input_capacity = int(users[computing_user_id].D2D_rate_of_Cooperators[caching_user_id] / task.content.block_size)
+                inputcost = users[computing_user_id].InputCost(users[caching_user_id], task.content.block_size)
+                block_cost = inputcost[0] + computing_cost
+                caching_user_cost = inputcost[2]
+                computing_user_cost = inputcost[1] + computing_cost
+                MC_graph.add_edge(caching_node, computing_node, capacity=input_capacity, weight=block_cost,
+                                  caching_user_cost=caching_user_cost, computing_user_cost=computing_user_cost,
+                                  relaying_user_cost=0)
+
+        # 增加辅助的computing node n'
+        virtual_computing_node = 'computing' + str(computing_user_id) + "'"
+        MC_graph.add_node(virtual_computing_node, demand=0)
+        computing_capacity = int(users[computing_user_id].residual_CPU/ task.processing_density / task.content.block_size)
+        MC_graph.add_edge(computing_node, virtual_computing_node, capacity=computing_capacity, weight=0,
+                          caching_user_cost=0, computing_user_cost=0, relaying_user_cost=0)
+
+    MC_graph.add_node('destination', demand=task.output_block_num)
+    # 把relaying nodes加入图中，并添加相应的computing nodes和relaying nodes的边，以及relaying nodes和destination的边
+    for relaying_user_id in avalible_members:
+        relaying_node = 'relaying' + str(relaying_user_id)
+        MC_graph.add_node(relaying_node, demand=0)
+        uploading_capacity = int(users[relaying_user_id].residual_upload_cellular_data_rate / task.content.block_size)
+        MC_graph.add_edge(relaying_node, 'destination', capacity=uploading_capacity, weight=0, caching_user_cost=0,
+                          computing_user_cost=0, relaying_user_cost=0)
+
+        for computing_user_id in avalible_members:
+            if computing_user_id in users[relaying_user_id].avalibleCooperators:
+                computing_node = 'computing' + str(computing_user_id) + "'"
+
+                output_capacity = int(users[computing_user_id].D2D_rate_of_Cooperators[relaying_user_id] / task.content.block_size)
+
+                output_cost = users[computing_user_id].OutputCost(users[relaying_user_id], task.content.block_size)
+                block_cost = output_cost[0]
+                relaying_user_cost = output_cost[2]
+                computing_user_cost = output_cost[1]
+                MC_graph.add_edge(computing_node, relaying_node, capacity=output_capacity, weight=block_cost,
+                                  caching_user_cost=0, computing_user_cost=computing_user_cost,
+                                  relaying_user_cost=relaying_user_cost)
+
+    return MC_graph
+
+def BruteGreedy_update(task,current_flowdict,users):
+    min_cost, flowdict=current_flowdict
+
+    residual_flowdict=sorted([(u, v) for u in flowdict for v in flowdict[u] if flowdict[u][v] > 0])
+
+   #筛选出有流量通过的边
+    for u,v in residual_flowdict:
+        u_id = re.sub('\D','', u)
+        v_id = re.sub('\D','', v)
+        u_function = re.findall(r'[A-Za-z]', u)
+        v_function = re.findall(r'[A-Za-z]', v)
+        flow_size=flowdict[u][v]
+
+        if u_function=='caching'or u_function=='computing'or u_function=='relaying':
+            user_id = int(u_id)
+            users[user_id].current_task_id=0
+
+        if v_function == 'caching' or v_function == 'computing' or v_function == 'relaying':
+            user_id = int(v_id)
+            users[user_id].current_task_id = 0
+
+        if u_function=='IOTplatform' and v_function=='computing':
+            user_id = int(v_id)
+            users[user_id].residual_CPU-=int(task.processing_density*users[user_id].download_cellular_data_rate)
+            users[user_id].residual_download_cellular_data_rate-=flow_size*task.content.block_size
+
+        if u_function=='caching' and v_function=='computing':
+            caching_user_id = int(u_id)
+            computing_user_id=int(v_id)
+
+            if caching_user_id!=computing_user_id:
+                caching_user=users[caching_user_id]
+                computing_user=users[computing_user_id]
+                caching_user.D2D_rate_of_Cooperators[computing_user_id]-=flow_size*task.content.block_size
+                computing_user.D2D_rate_of_Cooperators[caching_user_id] -= flow_size * task.content.block_size
+
+            users[computing_user_id].residual_CPU -= flow_size * task.processing_density * task.content.block_size
+
+        if u_function == 'relaying' and v_function == 'destination':
+            user_id = int(u_id)
+            users[user_id].residual_upload_cellular_data_rate -= flow_size * task.content.block_size
+
+        if u_function=='computing' and v_function=='relaying':
+            computing_user_id=int(u_id)
+            relaying_user_id=int(v_id)
+
+            if computing_user_id!=relaying_user_id:
+                users[computing_user_id].D2D_rate_of_Cooperators[relaying_user_id] -= flow_size * task.content.block_size
+                users[relaying_user_id].D2D_rate_of_Cooperators[computing_user_id] -= flow_size * task.content.block_size
+
+
+'''
 def BruteGreedy_createMCgraph(task,caching_members,avalible_members,users):
     MC_graph = nx.DiGraph()
 
@@ -296,16 +610,21 @@ def BruteGreedy_update(task,current_flowdict,users):
         if u_function=='IOTplatform' and v_function=='computing':
             user_id = int(v_id)
             users[user_id].residual_CPU-=int(task.processing_density*users[user_id].download_cellular_data_rate)
+            users[user_id].current_task_id = 0
 
         if u_function=='caching' and v_function=='computing':
             caching_user_id = int(u_id)
             computing_user_id=int(v_id)
+            users[caching_user_id].current_task_id = 0
+            users[computing_user_id].current_task_id = 0
+
             if caching_user_id==computing_user_id:
                 users[caching_user_id].residual_CPU=0
             else:
                 caching_user=users[caching_user_id]
                 computing_user=users[computing_user_id]
                 computing_user.residual_CPU-=int(computing_user.transmission_datarate(caching_user)*task.processing_density)
+'''
 
 def BruteForce(tasks,users):
     task_permutations=itertools.permutations([i for i in range(0,len(tasks))],len(tasks))

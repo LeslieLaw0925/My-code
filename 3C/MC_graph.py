@@ -62,8 +62,6 @@ def createMCgraph(task,caching_members,avalible_members,users):
         MC_graph.add_edge(computing_node, virtual_computing_node, capacity=computing_capacity, weight=0,
                           caching_user_cost=0, computing_user_cost=0, relaying_user_cost=0)
 
-
-
     MC_graph.add_node('destination', demand=task.output_block_num)
     # 把relaying nodes加入图中，并添加相应的computing nodes和relaying nodes的边，以及relaying nodes和destination的边
     for relaying_user_id in avalible_members:

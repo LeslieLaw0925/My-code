@@ -41,7 +41,6 @@ def execute():
                 user.initialize()
                 users.append(user)
 
-                user.current_task_id = -1
                 for task in tasks:
                     distance = math.sqrt(
                         math.pow((task.x_axis - task.x_axis), 2) + math.pow((task.y_axis - task.y_axis), 2))
@@ -54,7 +53,6 @@ def execute():
                 user.initialize()
                 users.append(user)
 
-                user.current_task_id = -1
                 for task in tasks:
                     distance = math.sqrt(
                         math.pow((task.x_axis - task.x_axis), 2) + math.pow((task.y_axis - task.y_axis), 2))
@@ -63,9 +61,11 @@ def execute():
 
         for user in users:
             user.avalibleCooperators.clear()
+            user.D2D_rate_of_Cooperators.clear()
             user.setAvalibleCooperators(user_range,users)
 
 
+        initial_total_cost=0
         for task in tasks:
             task.avalible_users.clear()
             task.caching_users.clear()
@@ -75,8 +75,17 @@ def execute():
             task.setAvalibaleUsers(users)
             task.setCachingUsers(users)
 
-            task.Initialize_cooperation(users)
+            task_cost=task.Initialize_cooperation(users)
 
+            initial_total_cost+=task_cost
+
+        # Lowerbound
+        LB_graph = Lower_bound.create_LBgraph(tasks, users)
+        LB_flow = nx.network_simplex(LB_graph, demand='demand', capacity='capacity', weight='weight')
+        LB_cost = LB_flow[0]
+
+
+        #本文CF算法
         starttime_CF = datetime.datetime.now()
         CF_result = CoalitionFormation.coalitionFormation(users, tasks)
         totalcost_CF = CF_result[0]
@@ -84,9 +93,14 @@ def execute():
         iteration_number = CF_result[2]
         endtime_CF = datetime.datetime.now()
 
-        for user in users:
-            user.current_task_id=-1
+        print('initial_total_cost is', initial_total_cost)
+        print('CF cost is', totalcost_CF)
+        print('Lowerbound is', LB_cost)
 
+        for user in users:
+            user.current_task_id = -1
+
+        # overlap_brute_greedy和nonoverlap_brute_greedy算法
         Comparison.overlap_BruteSolution_cost = 0
         Comparison.overlap_brute_greedy_usernum = 0
         Comparison.COUNT = 0
@@ -96,10 +110,6 @@ def execute():
         starttime_BG = datetime.datetime.now()
         Comparison.BruteGreedy(users, tasks)
         endtime_BG = datetime.datetime.now()
-
-
-
-        print('CF algorithm finished!')
 
         totalcost_NC=Comparison.Non_Cooperation(users,tasks)
         print('Non_Cooperation algorithm finished!')
@@ -117,7 +127,7 @@ def execute():
         result_file.write ('Running time of BruteForce is %d second(s)\n'%(BruteForce_endtime - BruteForce_starttime).seconds)
         result_file.write('\n\n')
         '''
-
+        # range_greedy算法
         Range_greedy_cost=Comparison.RangeGreedy(tasks,users)
         print('RangeGreedy algorithm finished!')
 
@@ -125,11 +135,6 @@ def execute():
         Random_cooperation_cost=Comparison.Random_cooperation(users,tasks)
         print('Random_cooperation algorithm finished!')
         '''
-
-        LB_graph=Lower_bound.create_LBgraph(tasks,users)
-        LB_flow=nx.network_simplex(LB_graph, demand='demand', capacity='capacity',
-                                                   weight='weight')
-        LB_cost=LB_flow[0]
 
         result_file.write('user number is %d\n'% user_num)
 

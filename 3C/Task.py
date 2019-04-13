@@ -85,8 +85,8 @@ class Task:
     def Initialize_cooperation(self,users):
         mc_graph = Comparison.BruteGreedy_non_overlap_createMCgraph(self, self.caching_users, self.avalible_users, users)
         task_flowdict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')
-        print(task_flowdict)
-        min_cost, flowdict = task_flowdict
+
+        task_cost, flowdict = task_flowdict
         modified_caching_members = []
         modified_avalible_members = []
 
@@ -116,7 +116,8 @@ class Task:
                     modified_avalible_members.append(user_id)
                     if v_function == 'caching' and user_id not in modified_caching_members:
                         modified_caching_members.append(user_id)
-
+                        
+        
         modified_graph = MC_graph.createMCgraph(self, modified_caching_members, modified_avalible_members, users)
         modified_flowdict = nx.network_simplex(modified_graph, demand='demand', capacity='capacity', weight='weight')
 
@@ -129,6 +130,8 @@ class Task:
 
         # 记录每个task已经组过的coalition及其组成情况
         self.record_UserHistory(self.current_avalible_users)
+
+        return task_cost
 
     def initializeCoalition(self,joined_users,users):
         caching_members = []
@@ -243,7 +246,6 @@ class Task:
             coalition_members_id.append(user_id)
 
         user_history=sorted(tuple(coalition_members_id))
-        #print('user history is',user_history)
 
         self.coalition_history.append(user_history)
 

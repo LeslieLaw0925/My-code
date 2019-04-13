@@ -45,6 +45,7 @@ class User:
         self.y_axis=rand.uniform(0,500)
         self.current_cost = 0
         self.current_task_id = -1
+        self.D2D_rate_of_Cooperators=[]
 
     def InputCost(self,caching_user,input_size):
         if caching_user.user_id==self.user_id:
@@ -100,7 +101,7 @@ class User:
                 if distance < user_range:
                     self.avalibleCooperators.append(helper.user_id)
 
-        self.D2D_rate_of_Cooperators = [0 for i in range(0, len(users))]  # 新建user与可达范围内的helper的D2D rate
+        self.D2D_rate_of_Cooperators .extend([0 for i in range(0, len(users))])  # 新建user与可达范围内的helper的D2D rate
 
 
 

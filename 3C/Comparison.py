@@ -189,9 +189,10 @@ def BruteGreedy(users, tasks):
             user.current_task_id = -1
 
         for task_id in task_ids:
-            non_overlap_total_cost += BruteGreedy_SingelTask(task_id, users, tasks,'non_overlap')
+            task_cost=BruteGreedy_SingelTask(task_id, users, tasks,'non_overlap')
+            non_overlap_total_cost += task_cost
 
-        if non_overlap_BruteSolution_cost == 0 or non_overlap_BruteSolution_cost >= non_overlap_total_cost:
+        if non_overlap_BruteSolution_cost == 0 or non_overlap_BruteSolution_cost > non_overlap_total_cost:
             non_overlap_BruteSolution_cost = non_overlap_total_cost
             non_overlap_brute_greedy_usernum = 0
             for user in users:
@@ -257,20 +258,19 @@ def BruteGreedy(n, begin, end,users, tasks):
 
 def BruteGreedy_SingelTask(task_id,users,tasks,ifoverlap):
     task=tasks[task_id]
-    #single_task_cost=0
 
     if ifoverlap=='overlap':
         mc_graph=BruteGreedy_createMCgraph(task,task.caching_users,task.avalible_users,users)
         task_flowdict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')
-        single_task_cost=task_flowdict[0]
+        overlap_single_task_cost=task_flowdict[0]
         BruteGreedy_update(task, task_flowdict, users)
+        return overlap_single_task_cost
     else:
         mc_graph = BruteGreedy_non_overlap_createMCgraph(task, task.caching_users, task.avalible_users, users)
         task_flowdict = nx.network_simplex(mc_graph, demand='demand', capacity='capacity', weight='weight')
-        single_task_cost = task_flowdict[0]
+        nonoverlap_single_task_cost = task_flowdict[0]
         BruteGreedy_non_overlap_update(task,task_flowdict, users)
-
-    return single_task_cost
+        return nonoverlap_single_task_cost
 
 def BruteGreedy_non_overlap_createMCgraph(task,caching_members,avalible_members,users):
     MC_graph = nx.DiGraph()
@@ -368,21 +368,22 @@ def BruteGreedy_non_overlap_update(task,current_flowdict,users):
     for u, v in residual_flowdict:
         u_id = re.sub('\D', '', u)
         v_id = re.sub('\D', '', v)
-        u_function = re.findall(r'[A-Za-z]', u)
-        v_function = re.findall(r'[A-Za-z]', v)
+        u_function = ''
+        v_function = ''
+        u_function = u_function.join(re.findall(r'[A-Za-z]', u))
+        v_function = v_function.join(re.findall(r'[A-Za-z]', v))
 
         if u_function == 'caching' or u_function == 'computing' or u_function == 'relaying':
             user_id = int(u_id)
-            users[user_id].current_task_id = 0
+            users[user_id].current_task_id = task.task_id
             if user_id not in modified_avalible_members:
                 modified_avalible_members.append(user_id)
                 if u_function == 'caching' and user_id not in modified_caching_members:
                     modified_caching_members.append(user_id)
 
-
         if v_function == 'caching' or v_function == 'computing' or v_function == 'relaying':
             user_id = int(v_id)
-            users[user_id].current_task_id = 0
+            users[user_id].current_task_id = task.task_id
             if user_id not in modified_avalible_members:
                 modified_avalible_members.append(user_id)
                 if v_function == 'caching' and user_id not in modified_caching_members:
@@ -471,21 +472,25 @@ def BruteGreedy_update(task,current_flowdict,users):
     for u,v in residual_flowdict:
         u_id = re.sub('\D','', u)
         v_id = re.sub('\D','', v)
-        u_function = re.findall(r'[A-Za-z]', u)
-        v_function = re.findall(r'[A-Za-z]', v)
+        u_function = ''
+        v_function = ''
+        u_function = u_function.join(re.findall(r'[A-Za-z]', u))
+        v_function = v_function.join(re.findall(r'[A-Za-z]', v))
         flow_size=flowdict[u][v]
 
         if u_function=='caching'or u_function=='computing'or u_function=='relaying':
             user_id = int(u_id)
-            users[user_id].current_task_id=0
+            users[user_id].current_task_id=task.task_id
 
         if v_function == 'caching' or v_function == 'computing' or v_function == 'relaying':
             user_id = int(v_id)
-            users[user_id].current_task_id = 0
+            users[user_id].current_task_id = task.task_id
 
         if u_function=='IOTplatform' and v_function=='computing':
             user_id = int(v_id)
             users[user_id].residual_CPU-=int(task.processing_density*users[user_id].download_cellular_data_rate)
+            if users[user_id].residual_CPU<0:
+                users[user_id].residual_CPU=0
             users[user_id].residual_download_cellular_data_rate-=flow_size*task.content.block_size
 
         if u_function=='caching' and v_function=='computing':
@@ -495,14 +500,24 @@ def BruteGreedy_update(task,current_flowdict,users):
             if caching_user_id!=computing_user_id:
                 caching_user=users[caching_user_id]
                 computing_user=users[computing_user_id]
+
                 caching_user.D2D_rate_of_Cooperators[computing_user_id]-=flow_size*task.content.block_size
+                if caching_user.D2D_rate_of_Cooperators[computing_user_id]<0:
+                    caching_user.D2D_rate_of_Cooperators[computing_user_id]=0
+
                 computing_user.D2D_rate_of_Cooperators[caching_user_id] -= flow_size * task.content.block_size
+                if computing_user.D2D_rate_of_Cooperators[caching_user_id]<0:
+                    computing_user.D2D_rate_of_Cooperators[caching_user_id]=0
 
             users[computing_user_id].residual_CPU -= flow_size * task.processing_density * task.content.block_size
+            if users[computing_user_id].residual_CPU<0:
+                users[computing_user_id].residual_CPU=0
 
         if u_function == 'relaying' and v_function == 'destination':
             user_id = int(u_id)
             users[user_id].residual_upload_cellular_data_rate -= flow_size * task.content.block_size
+            if users[user_id].residual_upload_cellular_data_rate<0:
+                users[user_id].residual_upload_cellular_data_rate=0
 
         if u_function=='computing' and v_function=='relaying':
             computing_user_id=int(u_id)
@@ -510,7 +525,12 @@ def BruteGreedy_update(task,current_flowdict,users):
 
             if computing_user_id!=relaying_user_id:
                 users[computing_user_id].D2D_rate_of_Cooperators[relaying_user_id] -= flow_size * task.content.block_size
+                if users[computing_user_id].D2D_rate_of_Cooperators[relaying_user_id]<0:
+                    users[computing_user_id].D2D_rate_of_Cooperators[relaying_user_id]=0
+
                 users[relaying_user_id].D2D_rate_of_Cooperators[computing_user_id] -= flow_size * task.content.block_size
+                if users[relaying_user_id].D2D_rate_of_Cooperators[computing_user_id]<0:
+                    users[relaying_user_id].D2D_rate_of_Cooperators[computing_user_id]=0
 
 
 '''

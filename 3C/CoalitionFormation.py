@@ -333,24 +333,6 @@ def removeUnused(task,current_flowdict,users):
         u_function = u_function.join(re.findall(r'[A-Za-z]', u))
         v_function = v_function.join(re.findall(r'[A-Za-z]', v))
 
-        '''
-        flow_size = flowdict[u][v]
-        # 记录每个参与到coalition的user的花费
-        if u_function == 'caching' and v_function == 'computing':
-            caching_id = int(u_id)
-            computing_id = int(v_id)
-            users[caching_id].current_cost += task.current_mc_graph[u][v]['caching_user_cost'] * flow_size
-            users[computing_id].current_cost += task.current_mc_graph[u][v]['computing_user_cost'] * flow_size
-        elif u_function == 'IOTplatform' and v_function == 'computing':
-            computing_id = int(v_id)
-            users[computing_id].current_cost += task.current_mc_graph[u][v]['computing_user_cost'] * flow_size
-        elif u_function == 'computing' and v_function == 'relaying':
-            computing_id = int(u_id)
-            relaying_id = int(v_id)
-            users[computing_id].current_cost += task.current_mc_graph[u][v]['computing_user_cost'] * flow_size
-            users[relaying_id].current_cost += task.current_mc_graph[u][v]['relaying_user_cost'] * flow_size
-        '''
-
         if u_id != '':
             user_id=int(u_id)
             if user_id not in modified_avalible_members:
@@ -379,7 +361,6 @@ def removeUnused(task,current_flowdict,users):
             users[member_id].current_task_id=task.task_id
         else:
             removed_users.append(member_id)
-
 
     for member_id in removed_users:
         users[member_id].current_task_id=-1

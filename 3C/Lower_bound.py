@@ -6,6 +6,7 @@ def create_LBgraph(tasks,users):
 
     LB_graph.add_node('IOTplatform', demand=0)
     min_processing_density=min([task.processing_density for task in tasks])
+    #min_task_output_ratio=min([task.output_ratio for task in tasks])
 
     for task in tasks:
         total_task_content+=task.output_block_num*task.content.block_size

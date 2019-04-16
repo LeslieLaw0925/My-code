@@ -13,8 +13,8 @@ contents=[]
 tasks=[]
 
 def execute():
-    #user_nums=[100,200,300,400,500]
-    user_nums = [70]
+    user_nums=[70,80,90,100,120,150]
+    #user_nums = [70]
     task_num=30
 
     user_range=500
@@ -33,7 +33,6 @@ def execute():
 
     for i in range(0,len(user_nums)):
         user_num=user_nums[i]
-        joined_users = []
 
         if i == 0:
             for i in range(0, user_nums[i]):
@@ -60,6 +59,7 @@ def execute():
                         user.avalibleTasks.append(task.task_id)
 
         for user in users:
+            user.current_task_id=-1
             user.avalibleCooperators.clear()
             user.D2D_rate_of_Cooperators.clear()
             user.setAvalibleCooperators(user_range,users)
@@ -76,14 +76,15 @@ def execute():
             task.setCachingUsers(users)
 
             task_cost=task.Initialize_cooperation(users)
+            print('current device number is', user_num)
+            print('initialized task is', task.task_id)
 
             initial_total_cost+=task_cost
 
         # Lowerbound
-        LB_graph = Lower_bound.create_LBgraph(tasks, users)
-        LB_flow = nx.network_simplex(LB_graph, demand='demand', capacity='capacity', weight='weight')
-        LB_cost = LB_flow[0]
-
+        LB_results = Lower_bound.LB_results(tasks, users)
+        LB_cost = LB_results[0]
+        LB_device_number = LB_results[1]
 
         #本文CF算法
         starttime_CF = datetime.datetime.now()
@@ -141,6 +142,7 @@ def execute():
         result_file.write('CoalitionFormation\'s total participated user number is %d\n' % CF_participated_usernum)
         result_file.write('overlap_BruteGreedy\'s total participated user number is %d\n' %Comparison.overlap_brute_greedy_usernum)
         result_file.write('non_overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.non_overlap_brute_greedy_usernum)
+        result_file.write('Lower bound\'s total participated user number is %d\n' % LB_device_number)
 
         result_file.write('Non_cooperation\'s total cost is %d\n' % totalcost_NC)
         result_file.write('CoalitionFormation\'s total cost is %d\n' % totalcost_CF)

@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/3C$task_range_energy_saving.coverage" NAME="task_range_energy_saving Coverage Results" MODIFIED="1547307739547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task_range" />
-    <SUITE FILE_PATH="coverage/3C$Main_device.coverage" NAME="Main_device Coverage Results" MODIFIED="1555152622503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/3C$Main_device.coverage" NAME="Main_device Coverage Results" MODIFIED="1555327497104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$task_iteration_time.coverage" NAME="task_iteration_time Coverage Results" MODIFIED="1553848021148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$Test.coverage" NAME="Test Coverage Results" MODIFIED="1542288370184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$member_num.coverage" NAME="member_num Coverage Results" MODIFIED="1546411865460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures" />
@@ -29,7 +29,7 @@
     <SUITE FILE_PATH="coverage/3C$task_range_member_num.coverage" NAME="task_range_member_num Coverage Results" MODIFIED="1547102893333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task_range" />
     <SUITE FILE_PATH="coverage/3C$mincostflow_graph.coverage" NAME="mincostflow_graph Coverage Results" MODIFIED="1538984049715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/min_cost_flow" />
     <SUITE FILE_PATH="coverage/3C$task_energy_saving.coverage" NAME="task_energy_saving Coverage Results" MODIFIED="1547307777195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
-    <SUITE FILE_PATH="coverage/3C$Main_task.coverage" NAME="Main_task Coverage Results" MODIFIED="1553243371598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/3C$Main_task.coverage" NAME="Main_task Coverage Results" MODIFIED="1555402625811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$device_energy_saving.coverage" NAME="device_energy_saving Coverage Results" MODIFIED="1547307651104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
     <SUITE FILE_PATH="coverage/3C$CoalitionFormation.coverage" NAME="CoalitionFormation Coverage Results" MODIFIED="1540217868223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$task_iteration_num.coverage" NAME="task_iteration_num Coverage Results" MODIFIED="1547311549715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
@@ -44,70 +44,52 @@
       <file leaf-file-name="Comparison.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Comparison.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5566">
-              <caret line="532" column="88" lean-forward="false" selection-start-line="532" selection-start-column="88" selection-end-line="532" selection-end-column="88" />
+            <state relative-caret-position="227">
+              <caret line="269" column="0" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#161#1391#0" expanded="false" />
                 <element signature="e#1431#2282#0" expanded="false" />
                 <element signature="e#2340#3798#0" expanded="false" />
                 <element signature="e#3835#4857#0" expanded="false" />
-                <element signature="e#7268#8761#1" expanded="false" />
-                <element signature="e#9709#14580#0" expanded="false" />
-                <element signature="e#14651#16057#0" expanded="false" />
-                <element signature="e#30226#31850#0" expanded="false" />
-                <element signature="e#31963#37403#0" expanded="false" />
-                <element signature="e#37513#38109#0" expanded="false" />
+                <element signature="e#7270#8763#1" expanded="false" />
+                <element signature="e#9711#14582#0" expanded="false" />
+                <element signature="e#14653#16059#0" expanded="false" />
+                <element signature="e#24227#25851#0" expanded="false" />
+                <element signature="e#25964#31404#0" expanded="false" />
+                <element signature="e#31514#32110#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lower_bound.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Lower_bound.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lower_bound.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="98" lean-forward="true" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
-              <folding />
+            <state relative-caret-position="322">
+              <caret line="14" column="63" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Min-cost-flow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Min-cost-flow.py">
+      <file leaf-file-name="Content.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
-              <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+            <state relative-caret-position="184">
+              <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Execute_task.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Execute_task.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Execute_task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2875">
-              <caret line="132" column="63" lean-forward="false" selection-start-line="132" selection-start-column="63" selection-end-line="132" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CVX.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CVX.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Execute_device.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Execute_device.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2346">
-              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="268">
+              <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -118,9 +100,21 @@
       <file leaf-file-name="MC_graph.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MC_graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+            <state relative-caret-position="437">
+              <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Execute_device.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Execute_device.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-118">
+              <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,29 +122,21 @@
       <file leaf-file-name="CoalitionFormation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CoalitionFormation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2369">
-              <caret line="334" column="0" lean-forward="false" selection-start-line="334" selection-start-column="0" selection-end-line="334" selection-end-column="0" />
+            <state relative-caret-position="7061">
+              <caret line="352" column="4" lean-forward="false" selection-start-line="352" selection-start-column="4" selection-end-line="352" selection-end-column="4" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#3292#13162#0" expanded="false" />
                 <element signature="e#13207#15080#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Task.py">
+      <file leaf-file-name="Perm.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Perm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding>
-                <element signature="e#14#35#0" expanded="true" />
-                <element signature="e#5696#6910#0" expanded="false" />
-                <element signature="e#6984#10582#0" expanded="false" />
-                <element signature="e#10945#11282#0" expanded="false" />
-                <element signature="e#11366#11990#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="575">
+              <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,9 +144,26 @@
       <file leaf-file-name="User.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/User.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="13" column="105" lean-forward="false" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
+            <state relative-caret-position="391">
+              <caret line="21" column="74" lean-forward="true" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Task.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1124">
+              <caret line="86" column="62" lean-forward="false" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
+              <folding>
+                <element signature="e#14#35#0" expanded="true" />
+                <element signature="e#2022#3140#1" expanded="false" />
+                <element signature="e#5696#6910#0" expanded="false" />
+                <element signature="e#6984#10582#0" expanded="false" />
+                <element signature="e#10945#11282#0" expanded="false" />
+                <element signature="e#11366#11990#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,9 +179,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Value</find>
-      <find>Va</find>
-      <find>after removing un</find>
       <find>value</find>
       <find>have ch</find>
       <find>We have</find>
@@ -206,6 +206,9 @@
       <find>477944010</find>
       <find>min_cost</find>
       <find>task_flowdict</find>
+      <find>add_node</find>
+      <find>block_size</find>
+      <find>1</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -243,16 +246,16 @@
         <option value="$PROJECT_DIR$/Figures/task/task_energy_saving.py" />
         <option value="$PROJECT_DIR$/Figures/task/task_iteration_num.py" />
         <option value="$PROJECT_DIR$/Figures/device/device_iteration_num.py" />
-        <option value="$PROJECT_DIR$/Execute_task.py" />
         <option value="$PROJECT_DIR$/min_cost_flow/Lower_bound.py" />
         <option value="$PROJECT_DIR$/MC_graph.py" />
-        <option value="$PROJECT_DIR$/Content.py" />
         <option value="$PROJECT_DIR$/User.py" />
-        <option value="$PROJECT_DIR$/Task.py" />
         <option value="$PROJECT_DIR$/CoalitionFormation.py" />
-        <option value="$PROJECT_DIR$/Execute_device.py" />
         <option value="$PROJECT_DIR$/Comparison.py" />
+        <option value="$PROJECT_DIR$/Task.py" />
+        <option value="$PROJECT_DIR$/Execute_device.py" />
+        <option value="$PROJECT_DIR$/Content.py" />
         <option value="$PROJECT_DIR$/Lower_bound.py" />
+        <option value="$PROJECT_DIR$/Execute_task.py" />
       </list>
     </option>
   </component>
@@ -264,7 +267,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1938" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
@@ -337,7 +341,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main_device">
+  <component name="RunManager" selected="Python.Main_task">
     <configuration default="false" name="device_iteration_num" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -591,9 +595,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Main_device" />
-        <item index="1" class="java.lang.String" itemvalue="Python.task_iteration_time" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Main_task" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Main_task" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Main_device" />
+        <item index="2" class="java.lang.String" itemvalue="Python.task_iteration_time" />
         <item index="3" class="java.lang.String" itemvalue="Python.Main_task_range" />
         <item index="4" class="java.lang.String" itemvalue="Python.device_iteration_num" />
       </list>
@@ -613,10 +617,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1938" height="1056" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1656017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1673774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -764,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Perm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Optimization.py" />
     <entry file="file://$PROJECT_DIR$/User_trial.py" />
     <entry file="file://$PROJECT_DIR$/min_cost_flow/device_main.py" />
@@ -866,27 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main_task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Content.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Execute_task_range.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main_device.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -898,14 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Execute_task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2875">
-          <caret line="132" column="63" lean-forward="false" selection-start-line="132" selection-start-column="63" selection-end-line="132" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,12 +892,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Execute_task_range.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main_task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Perm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoalitionFormation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7061">
+          <caret line="352" column="4" lean-forward="false" selection-start-line="352" selection-start-column="4" selection-end-line="352" selection-end-column="4" />
+          <folding>
+            <element signature="e#13207#15080#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MC_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="269" column="0" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#161#1391#0" expanded="false" />
+            <element signature="e#1431#2282#0" expanded="false" />
+            <element signature="e#2340#3798#0" expanded="false" />
+            <element signature="e#3835#4857#0" expanded="false" />
+            <element signature="e#7270#8763#1" expanded="false" />
+            <element signature="e#9711#14582#0" expanded="false" />
+            <element signature="e#14653#16059#0" expanded="false" />
+            <element signature="e#24227#25851#0" expanded="false" />
+            <element signature="e#25964#31404#0" expanded="false" />
+            <element signature="e#31514#32110#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="21" column="74" lean-forward="true" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Execute_device.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118">
+          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Task.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="1124">
+          <caret line="86" column="62" lean-forward="false" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
           <folding>
             <element signature="e#14#35#0" expanded="true" />
+            <element signature="e#2022#3140#1" expanded="false" />
             <element signature="e#5696#6910#0" expanded="false" />
             <element signature="e#6984#10582#0" expanded="false" />
             <element signature="e#10945#11282#0" expanded="false" />
@@ -939,69 +987,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/User.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="13" column="105" lean-forward="false" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoalitionFormation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2369">
-          <caret line="334" column="0" lean-forward="false" selection-start-line="334" selection-start-column="0" selection-end-line="334" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#3292#13162#0" expanded="false" />
-            <element signature="e#13207#15080#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MC_graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Execute_device.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2346">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Comparison.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5566">
-          <caret line="532" column="88" lean-forward="false" selection-start-line="532" selection-start-column="88" selection-end-line="532" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#161#1391#0" expanded="false" />
-            <element signature="e#1431#2282#0" expanded="false" />
-            <element signature="e#2340#3798#0" expanded="false" />
-            <element signature="e#3835#4857#0" expanded="false" />
-            <element signature="e#7268#8761#1" expanded="false" />
-            <element signature="e#9709#14580#0" expanded="false" />
-            <element signature="e#14651#16057#0" expanded="false" />
-            <element signature="e#30226#31850#0" expanded="false" />
-            <element signature="e#31963#37403#0" expanded="false" />
-            <element signature="e#37513#38109#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lower_bound.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="98" lean-forward="true" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+        <state relative-caret-position="322">
+          <caret line="14" column="63" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Execute_task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

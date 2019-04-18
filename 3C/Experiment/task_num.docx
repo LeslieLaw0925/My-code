@@ -1,108 +1,138 @@
 task num is 10
-CoalitionFormation's total participated user number is 18
-overlap_BruteGreedy's total participated user number is 6
-non_overlap_BruteGreedy's total participated user number is 20
+CoalitionFormation's total participated user number is 14
+overlap_BruteGreedy's total participated user number is 4
+non_overlap_BruteGreedy's total participated user number is 14
 Lower bound's total participated user number is 4
-Initial coalitionFormation's total cost is 25274737588
-Non_cooperation's total cost is 68570216547
-CoalitionFormation's total cost is 24430915762
-overlap_BruteGreedy's total cost is 22851652830
-non_overlap_BruteGreedy's total cost is 24748100706
-Range_greedy's total cost is 60495737257
-Lower bound is 21214519296
+Initial coalitionFormation's total cost is 34419402373
+Non_cooperation's total cost is 136324102102
+CoalitionFormation's total cost is 34303409624
+overlap_BruteGreedy's total cost is 32889742821
+non_overlap_BruteGreedy's total cost is 34284450274
+Range_greedy's total cost is 115055511835
+Lower bound is 33821655040
 
-Running time of CoalitionFormation is 2 second(s)
-Running time of BruteGreedy is 320 second(s)
-Iteration number of CoalitionFormation is 18
+Average device energy of CF is 0.245024
+Average device energy of Non_cooperation is 1.363241
+Average device energy of overlap_BruteGreedy is 0.822244
+Average device energy of non_overlap_BruteGreedy is 0.244889
+
+Running time of CoalitionFormation is 1 second(s)
+Running time of BruteGreedy is 315 second(s)
+Iteration number of CoalitionFormation is 6
 
 
 task num is 15
-CoalitionFormation's total participated user number is 26
+CoalitionFormation's total participated user number is 23
 overlap_BruteGreedy's total participated user number is 6
-non_overlap_BruteGreedy's total participated user number is 29
-Lower bound's total participated user number is 6
-Initial coalitionFormation's total cost is 42992217556
-Non_cooperation's total cost is 91386877238
-CoalitionFormation's total cost is 41174734721
-overlap_BruteGreedy's total cost is 37308756321
-non_overlap_BruteGreedy's total cost is 41445586326
-Range_greedy's total cost is 84065496092
-Lower bound is 32094120660
+non_overlap_BruteGreedy's total participated user number is 25
+Lower bound's total participated user number is 5
+Initial coalitionFormation's total cost is 54875469998
+Non_cooperation's total cost is 186792092802
+CoalitionFormation's total cost is 54130820561
+overlap_BruteGreedy's total cost is 50750304396
+non_overlap_BruteGreedy's total cost is 54820914240
+Range_greedy's total cost is 144639452809
+Lower bound is 47638200379
 
-Running time of CoalitionFormation is 5 second(s)
-Running time of BruteGreedy is 513 second(s)
-Iteration number of CoalitionFormation is 31
+Average device energy of CF is 0.235351
+Average device energy of Non_cooperation is 1.245281
+Average device energy of overlap_BruteGreedy is 0.845838
+Average device energy of non_overlap_BruteGreedy is 0.219284
+
+Running time of CoalitionFormation is 2 second(s)
+Running time of BruteGreedy is 429 second(s)
+Iteration number of CoalitionFormation is 10
 
 
 task num is 20
 CoalitionFormation's total participated user number is 32
-overlap_BruteGreedy's total participated user number is 7
-non_overlap_BruteGreedy's total participated user number is 38
-Lower bound's total participated user number is 6
-Initial coalitionFormation's total cost is 57844074846
-Non_cooperation's total cost is 110267584725
-CoalitionFormation's total cost is 54776042933
-overlap_BruteGreedy's total cost is 48382366484
-non_overlap_BruteGreedy's total cost is 56368651361
-Range_greedy's total cost is 107752125150
-Lower bound is 41902885588
+overlap_BruteGreedy's total participated user number is 9
+non_overlap_BruteGreedy's total participated user number is 36
+Lower bound's total participated user number is 5
+Initial coalitionFormation's total cost is 87865827005
+Non_cooperation's total cost is 308979181632
+CoalitionFormation's total cost is 82553936455
+overlap_BruteGreedy's total cost is 76747452191
+non_overlap_BruteGreedy's total cost is 84992137979
+Range_greedy's total cost is 240498063270
+Lower bound is 67526469707
 
-Running time of CoalitionFormation is 5 second(s)
-Running time of BruteGreedy is 595 second(s)
-Iteration number of CoalitionFormation is 41
+Average device energy of CF is 0.257981
+Average device energy of Non_cooperation is 1.544896
+Average device energy of overlap_BruteGreedy is 0.852749
+Average device energy of non_overlap_BruteGreedy is 0.236089
+
+Running time of CoalitionFormation is 4 second(s)
+Running time of BruteGreedy is 559 second(s)
+Iteration number of CoalitionFormation is 35
 
 
 task num is 25
-CoalitionFormation's total participated user number is 43
-overlap_BruteGreedy's total participated user number is 9
-non_overlap_BruteGreedy's total participated user number is 49
-Lower bound's total participated user number is 8
-Initial coalitionFormation's total cost is 77878706074
-Non_cooperation's total cost is 163449840713
-CoalitionFormation's total cost is 71562955808
-overlap_BruteGreedy's total cost is 62256228584
-non_overlap_BruteGreedy's total cost is 75171365676
-Range_greedy's total cost is 163008996835
-Lower bound is 54542479861
+CoalitionFormation's total participated user number is 39
+overlap_BruteGreedy's total participated user number is 10
+non_overlap_BruteGreedy's total participated user number is 43
+Lower bound's total participated user number is 6
+Initial coalitionFormation's total cost is 107809225493
+Non_cooperation's total cost is 375127164440
+CoalitionFormation's total cost is 100216752064
+overlap_BruteGreedy's total cost is 91331467324
+non_overlap_BruteGreedy's total cost is 103239414799
+Range_greedy's total cost is 266427264459
+Lower bound is 81859019593
 
-Running time of CoalitionFormation is 14 second(s)
-Running time of BruteGreedy is 707 second(s)
-Iteration number of CoalitionFormation is 109
+Average device energy of CF is 0.256966
+Average device energy of Non_cooperation is 1.500509
+Average device energy of overlap_BruteGreedy is 0.913315
+Average device energy of non_overlap_BruteGreedy is 0.240092
+
+Running time of CoalitionFormation is 9 second(s)
+Running time of BruteGreedy is 657 second(s)
+Iteration number of CoalitionFormation is 68
 
 
 task num is 30
 CoalitionFormation's total participated user number is 50
-overlap_BruteGreedy's total participated user number is 10
-non_overlap_BruteGreedy's total participated user number is 59
-Lower bound's total participated user number is 9
-Initial coalitionFormation's total cost is 104351915331
-Non_cooperation's total cost is 211439775964
-CoalitionFormation's total cost is 93558017759
-overlap_BruteGreedy's total cost is 79440765581
-non_overlap_BruteGreedy's total cost is 98439938180
-Range_greedy's total cost is 241209918044
-Lower bound is 69289728303
+overlap_BruteGreedy's total participated user number is 15
+non_overlap_BruteGreedy's total participated user number is 55
+Lower bound's total participated user number is 7
+Initial coalitionFormation's total cost is 127733152913
+Non_cooperation's total cost is 408601462938
+CoalitionFormation's total cost is 117754873038
+overlap_BruteGreedy's total cost is 105477594517
+non_overlap_BruteGreedy's total cost is 125690918237
+Range_greedy's total cost is 336189396045
+Lower bound is 92417357781
 
-Running time of CoalitionFormation is 18 second(s)
-Running time of BruteGreedy is 819 second(s)
-Iteration number of CoalitionFormation is 100
+Average device energy of CF is 0.235510
+Average device energy of Non_cooperation is 1.362005
+Average device energy of overlap_BruteGreedy is 0.703184
+Average device energy of non_overlap_BruteGreedy is 0.228529
+
+Running time of CoalitionFormation is 12 second(s)
+Running time of BruteGreedy is 808 second(s)
+Iteration number of CoalitionFormation is 89
 
 
 task num is 35
 CoalitionFormation's total participated user number is 54
 overlap_BruteGreedy's total participated user number is 15
-non_overlap_BruteGreedy's total participated user number is 66
-Lower bound's total participated user number is 10
-Initial coalitionFormation's total cost is 141323010434
-Non_cooperation's total cost is 296199411199
-CoalitionFormation's total cost is 120661332902
-overlap_BruteGreedy's total cost is 101292998119
-non_overlap_BruteGreedy's total cost is 132246846863
-Range_greedy's total cost is 304356212699
-Lower bound is 89722622389
+non_overlap_BruteGreedy's total participated user number is 65
+Lower bound's total participated user number is 7
+Initial coalitionFormation's total cost is 143195847691
+Non_cooperation's total cost is 427109335952
+CoalitionFormation's total cost is 130877436318
+overlap_BruteGreedy's total cost is 115318669607
+non_overlap_BruteGreedy's total cost is 143949097263
+Range_greedy's total cost is 364823353727
+Lower bound is 101129189333
 
-Running time of CoalitionFormation is 25 second(s)
-Running time of BruteGreedy is 906 second(s)
-Iteration number of CoalitionFormation is 135
+Average device energy of CF is 0.242366
+Average device energy of Non_cooperation is 1.220312
+Average device energy of overlap_BruteGreedy is 0.768791
+Average device energy of non_overlap_BruteGreedy is 0.221460
+
+Running time of CoalitionFormation is 19 second(s)
+Running time of BruteGreedy is 861 second(s)
+Iteration number of CoalitionFormation is 107
 
 

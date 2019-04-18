@@ -13,8 +13,8 @@ contents=[]
 tasks=[]
 
 def execute():
-    user_nums=[70,80,90,100,120,150]
-    #user_nums = [70]
+    #user_nums=[70,80,90,100,120,150]
+    user_nums = [70,100,200,300,400,500]
     task_num=30
 
     user_range=500
@@ -101,6 +101,7 @@ def execute():
         for user in users:
             user.current_task_id = -1
 
+        '''
         # overlap_brute_greedy和nonoverlap_brute_greedy算法
         Comparison.overlap_BruteSolution_cost = 0
         Comparison.overlap_brute_greedy_usernum = 0
@@ -111,6 +112,7 @@ def execute():
         starttime_BG = datetime.datetime.now()
         Comparison.BruteGreedy(users, tasks)
         endtime_BG = datetime.datetime.now()
+        '''
 
         totalcost_NC=Comparison.Non_Cooperation(users,tasks)
         print('Non_Cooperation algorithm finished!')
@@ -165,7 +167,7 @@ def execute():
         result_file.write('\n')
 
         result_file.write ('Running time of CoalitionFormation is %d second(s)\n'%(endtime_CF - starttime_CF).seconds)
-        result_file.write ('Running time of BruteGreedy is %d second(s)\n'%(endtime_BG - starttime_BG).seconds)
+        #result_file.write ('Running time of BruteGreedy is %d second(s)\n'%(endtime_BG - starttime_BG).seconds)
         result_file.write ('Iteration number of CoalitionFormation is %d\n' % iteration_number)
 
         result_file.write('\n\n')

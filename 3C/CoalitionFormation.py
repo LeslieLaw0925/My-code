@@ -5,14 +5,16 @@ import re
 from User import User
 
 def coalitionFormation(users,tasks):
-
     ifcontinue=True
     iteration=0
 
     while ifcontinue:
-        ifcoalitionchange1,iteration=joining(users,tasks,iteration)
-        ifcoalitionchange2,iteration=switching(users,tasks,iteration)
-        ifcoalitionchange3,iteration=retreating(users,tasks,iteration)
+        ifcoalitionchange1,iteration1=joining(users,tasks)
+        iteration+=iteration1
+        ifcoalitionchange2,iteration2=switching(users,tasks)
+        iteration+=iteration2
+        ifcoalitionchange3,iteration3=retreating(users,tasks)
+        iteration+=iteration3
 
         if ifcoalitionchange1==False and ifcoalitionchange2==False and ifcoalitionchange3==False:
             ifcontinue=False
@@ -28,7 +30,8 @@ def coalitionFormation(users,tasks):
 
     return [total_task_cost,total_participated_usernum,iteration]
 
-def joining(users,tasks,iteration):
+def joining(users,tasks):
+    iteration=0
     ifcoalitionchange=False
     for user_id in range(0,len(users)):
         user=users[user_id]
@@ -80,9 +83,9 @@ def joining(users,tasks,iteration):
 
     return (ifcoalitionchange,iteration)
 
-def switching(users,tasks,iteration):
+def switching(users,tasks):
     ifcoalitionchange=False
-
+    iteration=0
     for user_id in range(0,len(users)):
         for switcher_id in users[user_id].avalibleCooperators:
             user=users[user_id]
@@ -272,7 +275,8 @@ def switching(users,tasks,iteration):
 
     return (ifcoalitionchange,iteration)
 
-def retreating(users,tasks,iteration):
+def retreating(users,tasks):
+    iteration=0
     ifcoalitionchange=False
     for user_id in range(0,len(users)):
         user=users[user_id]

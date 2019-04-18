@@ -165,6 +165,12 @@ def execute():
         #result_file.write('Non_Cooperation_greedy\'s total cost is %d\n'%totalcost_NCG)
         result_file.write('Range_greedy\'s total cost is %d\n' % Range_greedy_cost)
         result_file.write('Lower bound is %d\n' % LB_cost)
+        result_file.write('\n')
+
+        result_file.write('Average device energy of CF is %f\n'% (totalcost_CF/CF_participated_usernum*math.pow(10,-10)))
+        result_file.write('Average device energy of Non_cooperation is %f\n' % (totalcost_NC / task_num*math.pow(10,-10)))
+        result_file.write('Average device energy of overlap_BruteGreedy is %f\n' % (Comparison.overlap_BruteSolution_cost / Comparison.overlap_brute_greedy_usernum*math.pow(10,-10)))
+        result_file.write('Average device energy of non_overlap_BruteGreedy is %f\n' % (Comparison.non_overlap_BruteSolution_cost / Comparison.non_overlap_brute_greedy_usernum*math.pow(10,-10)))
 
         result_file.write('\n')
         '''

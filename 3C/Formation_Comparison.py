@@ -1,39 +1,83 @@
 import random as rand
 
-def Random_cooperation(users,tasks):  #算法不合理，需要重新设计
-    joined_users=[]
+def Random_formation(users,tasks):
+    unjoined_users=[i for i in range(0,len(users))]
     task_ids=[i for i in range(0,len(tasks))]
     rand.shuffle(task_ids)
     total_cost=0
 
-    for task_id in task_ids:
+    for task in tasks:
+        computing_user_id=rand.choice(list(set(task.avalible_users)&set(unjoined_users)))
+        while computing_user_id==None:
+            computing_user_id = rand.choice(set(task.avalible_users) & set(unjoined_users))
+        computing_cost=users[computing_user_id].ComputingCost(task.content.input_size,task)
+        unjoined_users.remove(computing_user_id)
 
-        task=tasks[task_id]
-        content_size=task.output_block_num*task.content.block_size
+        input_cost=0
+        output_cost=0
 
-        caching_user_id=rand.choice(task.caching_users)
-        while caching_user_id in joined_users:
-            caching_user_id=rand.choice(task.caching_users)
-        joined_users.append(caching_user_id)
+        if computing_user_id not in task.caching_users:
+            caching_user_id=rand.choice(list(set(task.caching_users)&set(unjoined_users)&set(users[computing_user_id].avalibleCooperators)))
+            if caching_user_id==None:
+                input_cost=users[computing_user_id].DownloadingCost(task.content.input_size)
+            else:
+                input_cost=users[computing_user_id].InputCost(users[caching_user_id],task.content.input_size)[0]
+                unjoined_users.remove(caching_user_id)
 
-        computing_user_id = rand.choice(task.avalible_users)
-        while computing_user_id in joined_users or computing_user_id not in users[caching_user_id].avalibleCooperators:
-            print('there is a loop')
-            computing_user_id = rand.choice(task.avalible_users)
+        relaying_user_id=rand.choice(list(set(task.avalible_users)&set(users[computing_user_id].avalibleCooperators)&set(unjoined_users)))
+        if relaying_user_id==None:
+            output_cost=users[computing_user_id].OutputCost(users[computing_user_id],task.content.block_size*task.output_block_num)[0]
 
-        input_cost=users[computing_user_id].InputCost(users[caching_user_id],content_size)
-        computing_cost=users[computing_user_id].ComputingCost(content_size,task)
-        joined_users.append(computing_user_id)
+        else:
+            output_cost=users[computing_user_id].OutputCost(users[relaying_user_id],task.content.block_size*task.output_block_num)[0]
+            unjoined_users.remove(relaying_user_id)
 
-        relaying_user_id = rand.choice(task.avalible_users)
-        while relaying_user_id in joined_users or relaying_user_id not in users[computing_user_id].avalibleCooperators:
-            print('there is a loop')
-            relaying_user_id = rand.choice(task.avalible_users)
+        total_cost+=(input_cost+computing_cost+output_cost)
+
+    return [total_cost,len(users)-len(unjoined_users)]
+
+def Greedy_formation(users,tasks):
+    total_cost=0
+    unjoined_users = [i for i in range(0, len(users))]
+
+    for task in tasks:
+        min_computing_cost=0
+        computing_user_id=-1
+        #input_cost=0
+        #output_cost=0
+
+        for user_id in list(set(task.avalible_users)&set(unjoined_users)):
+            computing_cost=users[user_id].ComputingCost(task.content.input_size,task)
+            if computing_cost<min_computing_cost or min_computing_cost==0:
+                min_computing_cost=computing_cost
+                computing_user_id=user_id
+
+        unjoined_users.remove(computing_user_id)
+
+        caching_user_id=rand.choice(list(set(task.caching_users)&set(unjoined_users)))
+        if caching_user_id==None:
+            input_cost = users[computing_user_id].DownloadingCost(task.content.input_size)
+        else:
+            input_cost = users[computing_user_id].InputCost(users[caching_user_id], task.content.input_size)[0]
+            unjoined_users.remove(caching_user_id)
+
+        relaying_user_id = rand.choice(list(set(task.avalible_users) & set(users[computing_user_id].avalibleCooperators) & set(unjoined_users)))
+        if relaying_user_id == None:
+            output_cost = users[computing_user_id].OutputCost(users[computing_user_id],task.content.block_size * task.output_block_num)[0]
+        else:
+            output_cost = users[computing_user_id].OutputCost(users[relaying_user_id],task.content.block_size * task.output_block_num)[0]
+            unjoined_users.remove(relaying_user_id)
+
+        total_cost += (input_cost + min_computing_cost + output_cost)
+
+    return [total_cost,len(users)-len(unjoined_users)]
 
 
-        output_cost=users[computing_user_id].OutputCost(users[relaying_user_id],content_size)
-        joined_users.append(relaying_user_id)
 
-        total_cost+=(input_cost[0]+computing_cost+output_cost[0])
 
-    return total_cost
+
+
+
+
+
+

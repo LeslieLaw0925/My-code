@@ -1,0 +1,84 @@
+user number is 80
+CoalitionFormation's total participated user number is 42
+Random Formation's total participated user number is 64
+Greedy Formation's total participated user number is 75
+Lower bound's total participated user number is 8
+CoalitionFormation's total cost is 81801408704
+Random Formation's total cost is 437956763296
+Greedy Formation's total cost is 220828564202
+Lower bound is 73006687378
+
+Running time of CoalitionFormation is 11 second(s)
+Iteration number of CoalitionFormation is 83
+
+
+user number is 100
+CoalitionFormation's total participated user number is 44
+Random Formation's total participated user number is 67
+Greedy Formation's total participated user number is 75
+Lower bound's total participated user number is 9
+CoalitionFormation's total cost is 78439298774
+Random Formation's total cost is 463330445871
+Greedy Formation's total cost is 243416479961
+Lower bound is 71929813024
+
+Running time of CoalitionFormation is 13 second(s)
+Iteration number of CoalitionFormation is 68
+
+
+user number is 200
+CoalitionFormation's total participated user number is 48
+Random Formation's total participated user number is 65
+Greedy Formation's total participated user number is 75
+Lower bound's total participated user number is 10
+CoalitionFormation's total cost is 72432065808
+Random Formation's total cost is 419525012713
+Greedy Formation's total cost is 326805981700
+Lower bound is 70401705411
+
+Running time of CoalitionFormation is 16 second(s)
+Iteration number of CoalitionFormation is 45
+
+
+user number is 300
+CoalitionFormation's total participated user number is 45
+Random Formation's total participated user number is 64
+Greedy Formation's total participated user number is 75
+Lower bound's total participated user number is 7
+CoalitionFormation's total cost is 70119694884
+Random Formation's total cost is 403394750536
+Greedy Formation's total cost is 348366141718
+Lower bound is 68059897263
+
+Running time of CoalitionFormation is 20 second(s)
+Iteration number of CoalitionFormation is 52
+
+
+user number is 400
+CoalitionFormation's total participated user number is 46
+Random Formation's total participated user number is 60
+Greedy Formation's total participated user number is 75
+Lower bound's total participated user number is 7
+CoalitionFormation's total cost is 69757779826
+Random Formation's total cost is 350366507907
+Greedy Formation's total cost is 205039179231
+Lower bound is 68059897263
+
+Running time of CoalitionFormation is 18 second(s)
+Iteration number of CoalitionFormation is 35
+
+
+user number is 500
+CoalitionFormation's total participated user number is 47
+Random Formation's total participated user number is 60
+Greedy Formation's total participated user number is 75
+Lower bound's total participated user number is 7
+CoalitionFormation's total cost is 69149191092
+Random Formation's total cost is 1481388374661
+Greedy Formation's total cost is 506266382644
+Lower bound is 68014908982
+
+Running time of CoalitionFormation is 22 second(s)
+Iteration number of CoalitionFormation is 45
+
+

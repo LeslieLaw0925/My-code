@@ -3,20 +3,21 @@ from Content import Content
 from Task import Task
 import math
 import CoalitionFormation
-import Comparison
 import datetime
 import Lower_bound
+import Formation_Comparison
 
-users=[]
-contents=[]
-tasks=[]
+users = []
+contents = []
+tasks = []
+
 
 def execute():
-    #user_nums=[70,80,90,100,120,150]
-    user_nums = [70,100,200,300,400,500]
-    task_num=30
+    # user_nums=[70,80,90,100,120,150]
+    user_nums = [80, 100, 200, 300, 400, 500]
+    task_num = 25
 
-    user_range=500
+    user_range = 500
 
     for i in range(0, Content.content_num):
         content = Content(i)
@@ -26,12 +27,12 @@ def execute():
         task = Task(contents, i)
         tasks.append(task)
 
-    result_file = open('Experiment/device_num.docx', 'w')
+    result_file = open('Experiment/formation_device_num.docx', 'w')
 
-    #在不同数目设备下，固定的任务数目在系统中的表现
+    # 在不同数目设备下，固定的任务数目在系统中的表现
 
-    for i in range(0,len(user_nums)):
-        user_num=user_nums[i]
+    for i in range(0, len(user_nums)):
+        user_num = user_nums[i]
 
         if i == 0:
             for i in range(0, user_nums[i]):
@@ -58,13 +59,12 @@ def execute():
                         user.avalibleTasks.append(task.task_id)
 
         for user in users:
-            user.current_task_id=-1
+            user.current_task_id = -1
             user.avalibleCooperators.clear()
             user.D2D_rate_of_Cooperators.clear()
-            user.setAvalibleCooperators(user_range,users)
+            user.setAvalibleCooperators(user_range, users)
 
-
-        initial_total_cost=0
+        initial_total_cost = 0
         for task in tasks:
             task.avalible_users.clear()
             task.caching_users.clear()
@@ -74,18 +74,18 @@ def execute():
             task.setAvalibaleUsers(users)
             task.setCachingUsers(users)
 
-            task_cost=task.Initialize_cooperation(users)
+            task_cost = task.Initialize_cooperation(users)
             print('current device number is', user_num)
             print('initialized task is', task.task_id)
 
-            initial_total_cost+=task_cost
+            initial_total_cost += task_cost
 
         # Lowerbound
         LB_results = Lower_bound.LB_results(tasks, users)
         LB_cost = LB_results[0]
         LB_device_number = LB_results[1]
 
-        #本文CF算法
+        # 本文CF算法
         starttime_CF = datetime.datetime.now()
         CF_result = CoalitionFormation.coalitionFormation(users, tasks)
         totalcost_CF = CF_result[0]
@@ -97,9 +97,12 @@ def execute():
         print('CF cost is', totalcost_CF)
         print('Lowerbound is', LB_cost)
 
+        Random_formation=Formation_Comparison.Random_formation(users,tasks)
+        Greedy_formation=Formation_Comparison.Greedy_formation(users,tasks)
+
+        '''
         for user in users:
             user.current_task_id = -1
-
 
         # overlap_brute_greedy和nonoverlap_brute_greedy算法
         Comparison.overlap_BruteSolution_cost = 0
@@ -111,49 +114,39 @@ def execute():
         starttime_BG = datetime.datetime.now()
         Comparison.BruteGreedy(users, tasks)
         endtime_BG = datetime.datetime.now()
+        
 
-
-        totalcost_NC=Comparison.Non_Cooperation(users,tasks)
+        totalcost_NC = Comparison.Non_Cooperation(users, tasks)
         print('Non_Cooperation algorithm finished!')
 
-        # 暴力搜索方案弃用
-        '''
-        BruteForce_starttime = datetime.datetime.now()
-        BruteForce_cost=Comparison.BruteForce(tasks,users)
-        BruteForce_endtime = datetime.datetime.now()
-    
-        result_file.write('task num is %d\n' % task_num)
-        result_file.write('BruteForce\'s total cost is %d\n' % BruteForce_cost)
-        result_file.write('Compared to CF, approximation of BruteForce improves is %f%%\n' % (totalcost_CF/BruteForce_cost*100))
-        result_file.write('Running time of CoalitionFormation is %d second(s)\n' % (endtime_CF - starttime_CF).seconds)
-        result_file.write ('Running time of BruteForce is %d second(s)\n'%(BruteForce_endtime - BruteForce_starttime).seconds)
-        result_file.write('\n\n')
-        '''
         # range_greedy算法
-        Range_greedy_cost=Comparison.RangeGreedy(tasks,users)
+        Range_greedy_cost = Comparison.RangeGreedy(tasks, users)
         print('RangeGreedy algorithm finished!')
-
-        result_file.write('user number is %d\n'% user_num)
+        '''
+        result_file.write('user number is %d\n' % user_num)
 
         result_file.write('CoalitionFormation\'s total participated user number is %d\n' % CF_participated_usernum)
-        result_file.write('overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.overlap_brute_greedy_usernum)
-        result_file.write('non_overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.non_overlap_brute_greedy_usernum)
+        result_file.write('Random Formation\'s total participated user number is %d\n' % Random_formation[1])
+        result_file.write('Greedy Formation\'s total participated user number is %d\n' % Greedy_formation[1])
+        #result_file.write('overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.overlap_brute_greedy_usernum)
+        #result_file.write('non_overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.non_overlap_brute_greedy_usernum)
         result_file.write('Lower bound\'s total participated user number is %d\n' % LB_device_number)
 
-        result_file.write('Non_cooperation\'s total cost is %d\n' % totalcost_NC)
+        #result_file.write('Non_cooperation\'s total cost is %d\n' % totalcost_NC)
         result_file.write('CoalitionFormation\'s total cost is %d\n' % totalcost_CF)
-        result_file.write('overlap_BruteGreedy\'s total cost is %d\n' % Comparison.overlap_BruteSolution_cost)
-        result_file.write('non_overlap_BruteGreedy\'s total cost is %d\n' % Comparison.non_overlap_BruteSolution_cost)
-        result_file.write('Range_greedy\'s total cost is %d\n' % Range_greedy_cost)
+        result_file.write('Random Formation\'s total cost is %d\n' % Random_formation[0])
+        result_file.write('Greedy Formation\'s total cost is %d\n' % Greedy_formation[0])
+        #result_file.write('overlap_BruteGreedy\'s total cost is %d\n' % Comparison.overlap_BruteSolution_cost)
+        #result_file.write('non_overlap_BruteGreedy\'s total cost is %d\n' % Comparison.non_overlap_BruteSolution_cost)
+        #result_file.write('Range_greedy\'s total cost is %d\n' % Range_greedy_cost)
         result_file.write('Lower bound is %d\n' % LB_cost)
 
         result_file.write('\n')
 
-        result_file.write ('Running time of CoalitionFormation is %d second(s)\n'%(endtime_CF - starttime_CF).seconds)
-        result_file.write ('Running time of BruteGreedy is %d second(s)\n'%(endtime_BG - starttime_BG).seconds)
-        result_file.write ('Iteration number of CoalitionFormation is %d\n' % iteration_number)
+        result_file.write('Running time of CoalitionFormation is %d second(s)\n' % (endtime_CF - starttime_CF).seconds)
+        #result_file.write('Running time of BruteGreedy is %d second(s)\n' % (endtime_BG - starttime_BG).seconds)
+        result_file.write('Iteration number of CoalitionFormation is %d\n' % iteration_number)
 
         result_file.write('\n\n')
-
 
     result_file.close()

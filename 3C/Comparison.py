@@ -167,56 +167,6 @@ def BruteGreedy(users, tasks):
             user.residual_download_cellular_data_rate = user.download_cellular_data_rate
             user.residual_upload_cellular_data_rate = user.upload_cellular_data_rate
 
-
-'''
-def BruteGreedy(n, begin, end,users, tasks):
-    global COUNT
-    global BruteSolution_cost
-    global brute_greedy_usernum
-
-    if begin >= end:
-        print(n)
-        total_cost=0
-
-        for user in users:
-            user.current_task_id =-1
-            for helper_id in user.avalibleCooperators:
-                user.D2D_rate_of_Cooperators[helper_id]=user.transmission_datarate(users[helper_id])
-
-        for task_id in n:
-            total_cost+=BruteGreedy_SingelTask(task_id,users,tasks)
-
-        if BruteSolution_cost==0 or BruteSolution_cost>total_cost:
-            BruteSolution_cost=total_cost
-            brute_greedy_usernum=0
-            for user in users:
-                if user.current_task_id!=-1:
-                    brute_greedy_usernum+=1
-
-        for user in users:
-            user.residual_CPU=user.idle_computation_capacity
-            user.residual_download_cellular_data_rate=user.download_cellular_data_rate
-            user.residual_upload_cellular_data_rate=user.upload_cellular_data_rate
-
-        COUNT += 1
-
-        print('the total_cost is,', total_cost)
-        print('the BruteSolution_cost is,', BruteSolution_cost)
-
-    else:
-        if COUNT<=50:
-            #i = begin
-            i=end-1
-
-            for num in range(begin, end):
-                n[num], n[i] = n[i], n[num]
-
-                #BruteGreedy(n, begin + 1, end,users, tasks)
-                BruteGreedy(n, begin, end-1, users, tasks)
-
-                n[num], n[i] = n[i], n[num]
-'''
-
 def BruteGreedy_SingelTask(task_id,users,tasks,ifoverlap):
     task=tasks[task_id]
 

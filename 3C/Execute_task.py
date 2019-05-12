@@ -5,7 +5,7 @@ import math
 import CoalitionFormation
 import Comparison
 import datetime
-import networkx as nx
+import Simplex
 import Lower_bound
 
 users=[]
@@ -147,6 +147,9 @@ def execute():
 
         Range_greedy_cost=Comparison.RangeGreedy(tasks,users)
 
+        # simplex 方法
+        simplex_result = Simplex.Energy_min(users, tasks)
+
         #Random_cooperation_cost=Comparison.Random_cooperation(users,tasks)
 
         result_file.write('task num is %d\n'%task_num)
@@ -164,6 +167,7 @@ def execute():
         #result_file.write('Random_cooperation\'s total cost is %d\n' % Random_cooperation_cost)
         #result_file.write('Non_Cooperation_greedy\'s total cost is %d\n'%totalcost_NCG)
         result_file.write('Range_greedy\'s total cost is %d\n' % Range_greedy_cost)
+        result_file.write('Simplex\'s total cost is %f\n' % simplex_result)
         result_file.write('Lower bound is %d\n' % LB_cost)
         result_file.write('\n')
 

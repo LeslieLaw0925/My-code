@@ -6,14 +6,15 @@ import CoalitionFormation
 import Comparison
 import datetime
 import Lower_bound
+import Simplex
 
 users=[]
 contents=[]
 tasks=[]
 
 def execute():
-    #user_nums=[70,80,90,100,120,150]
-    user_nums = [70,100,200,300,400,500]
+    user_nums=[70]
+    #user_nums = [70,100,200,300,400,500]
     task_num=30
 
     user_range=500
@@ -100,7 +101,7 @@ def execute():
         for user in users:
             user.current_task_id = -1
 
-
+        '''
         # overlap_brute_greedy和nonoverlap_brute_greedy算法
         Comparison.overlap_BruteSolution_cost = 0
         Comparison.overlap_brute_greedy_usernum = 0
@@ -112,7 +113,7 @@ def execute():
         Comparison.BruteGreedy(users, tasks)
         endtime_BG = datetime.datetime.now()
 
-
+        '''
         totalcost_NC=Comparison.Non_Cooperation(users,tasks)
         print('Non_Cooperation algorithm finished!')
 
@@ -133,24 +134,28 @@ def execute():
         Range_greedy_cost=Comparison.RangeGreedy(tasks,users)
         print('RangeGreedy algorithm finished!')
 
+        #simplex 方法
+        simplex_result=Simplex.Energy_min(users,tasks)
+
         result_file.write('user number is %d\n'% user_num)
 
         result_file.write('CoalitionFormation\'s total participated user number is %d\n' % CF_participated_usernum)
-        result_file.write('overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.overlap_brute_greedy_usernum)
-        result_file.write('non_overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.non_overlap_brute_greedy_usernum)
+        #result_file.write('overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.overlap_brute_greedy_usernum)
+        #result_file.write('non_overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.non_overlap_brute_greedy_usernum)
         result_file.write('Lower bound\'s total participated user number is %d\n' % LB_device_number)
 
         result_file.write('Non_cooperation\'s total cost is %d\n' % totalcost_NC)
         result_file.write('CoalitionFormation\'s total cost is %d\n' % totalcost_CF)
-        result_file.write('overlap_BruteGreedy\'s total cost is %d\n' % Comparison.overlap_BruteSolution_cost)
-        result_file.write('non_overlap_BruteGreedy\'s total cost is %d\n' % Comparison.non_overlap_BruteSolution_cost)
+        #result_file.write('overlap_BruteGreedy\'s total cost is %d\n' % Comparison.overlap_BruteSolution_cost)
+        #result_file.write('non_overlap_BruteGreedy\'s total cost is %d\n' % Comparison.non_overlap_BruteSolution_cost)
         result_file.write('Range_greedy\'s total cost is %d\n' % Range_greedy_cost)
+        result_file.write('Simplex\'s total cost is %f\n' % simplex_result)
         result_file.write('Lower bound is %d\n' % LB_cost)
 
         result_file.write('\n')
 
         result_file.write ('Running time of CoalitionFormation is %d second(s)\n'%(endtime_CF - starttime_CF).seconds)
-        result_file.write ('Running time of BruteGreedy is %d second(s)\n'%(endtime_BG - starttime_BG).seconds)
+        #result_file.write ('Running time of BruteGreedy is %d second(s)\n'%(endtime_BG - starttime_BG).seconds)
         result_file.write ('Iteration number of CoalitionFormation is %d\n' % iteration_number)
 
         result_file.write('\n\n')

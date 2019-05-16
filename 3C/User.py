@@ -34,7 +34,7 @@ class User:
         self.idle_computation_capacity = (1 - self.current_load) * self.computation_capacity  # /Ghz idle computation capacity
         self.residual_CPU=self.idle_computation_capacity #用于解最优值
 
-        self.download_cellular_data_rate = rand.uniform(5,20) * math.pow(10, 6)  # /Mbps 蜂窝网下行链路
+        self.download_cellular_data_rate = rand.uniform(1,10) * math.pow(10, 6)  # /Mbps 蜂窝网下行链路
         self.upload_cellular_data_rate = self.download_cellular_data_rate * rand.uniform(0, 0.5)  # /Mbps 蜂窝网上行链路
         self.residual_download_cellular_data_rate = self.download_cellular_data_rate
         self.residual_upload_cellular_data_rate = self.upload_cellular_data_rate

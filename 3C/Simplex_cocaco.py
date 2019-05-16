@@ -67,7 +67,6 @@ def Energy_min(users,tasks):
         #增加约束：一个user只能服务一个task
         #prob_energy_min += lpSum(variables['cpu' + str(k) + ',' + str(i)] for k in users[i].avalibleTasks) == 1
 
-
     for k in range(task_num):
         #(9)
         prob_energy_min += lpSum(variables['cpu' + str(k) + ',' + str(i)] for i in tasks[k].avalible_users)==1
@@ -92,21 +91,4 @@ def Energy_min(users,tasks):
     #prob_energy_min.writeLP('energy_min.lp')
     prob_energy_min.solve()
 
-    participated_devices=[]
-
-    for v in prob_energy_min.variables():  ##变量输出
-        variable_name=v.name.split(',')
-
-        v_len=len(variable_name)
-
-        if v.varValue==1:
-            if v_len==2:
-                if int(variable_name[1]) not in participated_devices:
-                    participated_devices.append(int(variable_name[1]))
-            elif v_len==3:
-                if int(variable_name[1]) not in participated_devices:
-                    participated_devices.append(int(variable_name[1]))
-                if int(variable_name[2]) not in participated_devices:
-                    participated_devices.append(int(variable_name[2]))
-
-    return [value(prob_energy_min.objective),len(participated_devices)]
+    return value(prob_energy_min.objective)

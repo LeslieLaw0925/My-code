@@ -13,8 +13,9 @@ contents=[]
 tasks=[]
 
 def execute():
-    user_nums=[70]
+    #user_nums=[100]
     #user_nums = [70,100,200,300,400,500]
+    user_nums = [70,80,90,100]
     task_num=30
 
     user_range=500
@@ -136,6 +137,7 @@ def execute():
 
         #simplex 方法
         simplex_result=Simplex.Energy_min(users,tasks)
+        print('Simplex algorithm\'s cost is',simplex_result[0])
 
         result_file.write('user number is %d\n'% user_num)
 
@@ -143,13 +145,14 @@ def execute():
         #result_file.write('overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.overlap_brute_greedy_usernum)
         #result_file.write('non_overlap_BruteGreedy\'s total participated user number is %d\n' % Comparison.non_overlap_brute_greedy_usernum)
         result_file.write('Lower bound\'s total participated user number is %d\n' % LB_device_number)
+        result_file.write('Simplex\'s total participated user number is %d\n' % simplex_result[1])
 
         result_file.write('Non_cooperation\'s total cost is %d\n' % totalcost_NC)
         result_file.write('CoalitionFormation\'s total cost is %d\n' % totalcost_CF)
         #result_file.write('overlap_BruteGreedy\'s total cost is %d\n' % Comparison.overlap_BruteSolution_cost)
         #result_file.write('non_overlap_BruteGreedy\'s total cost is %d\n' % Comparison.non_overlap_BruteSolution_cost)
         result_file.write('Range_greedy\'s total cost is %d\n' % Range_greedy_cost)
-        result_file.write('Simplex\'s total cost is %f\n' % simplex_result)
+        result_file.write('Simplex\'s total cost is %f\n' % simplex_result[0])
         result_file.write('Lower bound is %d\n' % LB_cost)
 
         result_file.write('\n')

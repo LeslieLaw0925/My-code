@@ -1,13 +1,56 @@
 user number is 70
-CoalitionFormation's total participated user number is 46
-Lower bound's total participated user number is 11
-Non_cooperation's total cost is 289844491609
-CoalitionFormation's total cost is 111089789907
-Range_greedy's total cost is 260724749374
-Simplex's total cost is 481121717.000000
-Lower bound is 111860019633
+CoalitionFormation's total participated user number is 45
+Lower bound's total participated user number is 12
+Simplex's total participated user number is 12
+Non_cooperation's total cost is 308858597794
+CoalitionFormation's total cost is 122958188535
+Range_greedy's total cost is 358140881026
+Simplex's total cost is 98609103403.463577
+Lower bound is 121422475657
 
-Running time of CoalitionFormation is 15 second(s)
-Iteration number of CoalitionFormation is 114
+Running time of CoalitionFormation is 13 second(s)
+Iteration number of CoalitionFormation is 116
+
+
+user number is 80
+CoalitionFormation's total participated user number is 47
+Lower bound's total participated user number is 14
+Simplex's total participated user number is 11
+Non_cooperation's total cost is 350068575250
+CoalitionFormation's total cost is 118953412846
+Range_greedy's total cost is 327976815341
+Simplex's total cost is 98584591845.052963
+Lower bound is 77835450364
+
+Running time of CoalitionFormation is 13 second(s)
+Iteration number of CoalitionFormation is 102
+
+
+user number is 90
+CoalitionFormation's total participated user number is 47
+Lower bound's total participated user number is 15
+Simplex's total participated user number is 12
+Non_cooperation's total cost is 318891848901
+CoalitionFormation's total cost is 118141989473
+Range_greedy's total cost is 328678435897
+Simplex's total cost is 98147970579.899033
+Lower bound is 77827487740
+
+Running time of CoalitionFormation is 17 second(s)
+Iteration number of CoalitionFormation is 93
+
+
+user number is 100
+CoalitionFormation's total participated user number is 48
+Lower bound's total participated user number is 17
+Simplex's total participated user number is 12
+Non_cooperation's total cost is 360168055992
+CoalitionFormation's total cost is 115709436569
+Range_greedy's total cost is 354312339848
+Simplex's total cost is 98147970571.775574
+Lower bound is 77820281092
+
+Running time of CoalitionFormation is 12 second(s)
+Iteration number of CoalitionFormation is 65
 
 

@@ -23,8 +23,8 @@ plt.bar(x+2*width, CF, width=width,  label='F3C algorithm',tick_label = device_n
 plt.bar(x+3*width, non_overlap_BruteGreedy, width=width, label='Non-overlapping Brute Greedy strategy')
 
 
-plt.ylabel("Participated device number T'",fontsize=12)
-plt.xlabel("Fog device number",fontsize=12)
+plt.ylabel("Participated device number T'",fontsize=15)
+plt.xlabel("Fog device number",fontsize=15)
 plt.ylim(0,81)
 plt.legend()
 plt.show()

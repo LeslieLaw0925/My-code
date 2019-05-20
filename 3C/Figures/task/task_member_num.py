@@ -24,8 +24,8 @@ plt.bar(x+3*width, non_overlap_BruteGreedy, width=width, label='Non-overlapping 
 
 
 
-plt.ylabel("Participated device number T'",fontsize=12)
-plt.xlabel("Task number",fontsize=12)
+plt.ylabel("Participated device number T'",fontsize=15)
+plt.xlabel("Task number",fontsize=15)
 plt.ylim(0,70)
 plt.legend()
 plt.show()

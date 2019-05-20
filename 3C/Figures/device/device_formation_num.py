@@ -19,8 +19,8 @@ plt.bar(x+width, RandomFormation, width=width,  label='Random formation strategy
 plt.bar(x+2*width, GreedyFormation, width=width, label='Greedy formation strategy strategy')
 
 
-plt.ylabel("Participated device number T'",fontsize=12)
-plt.xlabel("Fog device number",fontsize=12)
+plt.ylabel("Participated device number T'",fontsize=15)
+plt.xlabel("Fog device number",fontsize=15)
 plt.ylim(0,100)
 plt.legend()
 plt.show()

@@ -15,13 +15,21 @@ total_width, n = 0.8, 4
 width = total_width / n
 x = x - (total_width - width) / size
 
+label = ["Lower Bound", "F3C algorithm",'Greedy formation strategy','Random formation strategy']
+
+'''
 plt.bar(x, lower_bound, width=width, label='Lower Bound')
 plt.bar(x+width, CoalitionFormation, width=width,  label='F3C algorithm',tick_label = task_num)
 plt.bar(x+2*width, GreedyFormation, width=width, label='Greedy formation strategy')
 plt.bar(x+3*width, RandomFormation, width=width, label='Random formation strategy')
+'''
+plt.bar(x, lower_bound, width=width)
+plt.bar(x+width, CoalitionFormation, width=width,tick_label = task_num)
+plt.bar(x+2*width, GreedyFormation, width=width)
+plt.bar(x+3*width, RandomFormation, width=width)
 
-plt.ylabel(r"Energy consumption ($\times 10^{12}$)",fontsize=12)
-plt.xlabel("Task number",fontsize=12)
-plt.ylim(0,6.5)
-plt.legend()
+plt.ylabel(r"Energy consumption ($\times 10^{12}$)",fontsize=18)
+plt.xlabel("Task number",fontsize=18)
+plt.ylim(0,6.7)
+plt.legend(label,fontsize=12)
 plt.show()

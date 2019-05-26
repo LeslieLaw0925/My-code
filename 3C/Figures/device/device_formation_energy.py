@@ -23,8 +23,8 @@ plt.bar(x+2*width, GreedyFormation, width=width, label='Greedy formation strateg
 plt.bar(x+3*width, RandomFormation, width=width, label='Random formation strategy')
 '''
 plt.bar(x, lower_bound, width=width)
-plt.bar(x+width, CoalitionFormation, width=width,tick_label = device_num)
-plt.bar(x+2*width, GreedyFormation, width=width)
+plt.bar(x+width, CoalitionFormation, width=width,tick_label = device_num,hatch='////')
+plt.bar(x+2*width, GreedyFormation, width=width,hatch='....')
 plt.bar(x+3*width, RandomFormation, width=width)
 
 plt.ylabel(r"Energy consumption ($\times 10^{12}$)",fontsize=18)

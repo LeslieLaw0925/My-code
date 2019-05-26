@@ -14,33 +14,33 @@
     <SUITE FILE_PATH="coverage/3C$Main_device.coverage" NAME="Main_device Coverage Results" MODIFIED="1558014563961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$task_iteration_time.coverage" NAME="task_iteration_time Coverage Results" MODIFIED="1553848021148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$Test.coverage" NAME="Test Coverage Results" MODIFIED="1542288370184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/3C$formation_average_energy.coverage" NAME="formation_average_energy Coverage Results" MODIFIED="1558080107248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
+    <SUITE FILE_PATH="coverage/3C$formation_average_energy.coverage" NAME="formation_average_energy Coverage Results" MODIFIED="1558856209448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$member_num.coverage" NAME="member_num Coverage Results" MODIFIED="1546411865460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures" />
-    <SUITE FILE_PATH="coverage/3C$device_member_num.coverage" NAME="device_member_num Coverage Results" MODIFIED="1558080020057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
+    <SUITE FILE_PATH="coverage/3C$device_member_num.coverage" NAME="device_member_num Coverage Results" MODIFIED="1558855967208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
     <SUITE FILE_PATH="coverage/3C$Main_task_range.coverage" NAME="Main_task_range Coverage Results" MODIFIED="1552989481558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/3C$device_formation_energy.coverage" NAME="device_formation_energy Coverage Results" MODIFIED="1558086025917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
+    <SUITE FILE_PATH="coverage/3C$device_formation_energy.coverage" NAME="device_formation_energy Coverage Results" MODIFIED="1558856104098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
     <SUITE FILE_PATH="coverage/3C$device_energy_saving__1_.coverage" NAME="device_energy_saving (1) Coverage Results" MODIFIED="1546516563692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
     <SUITE FILE_PATH="coverage/3C$task_formation.coverage" NAME="task_formation Coverage Results" MODIFIED="1555915379289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$Min_cost_flow.coverage" NAME="Min-cost-flow Coverage Results" MODIFIED="1537776363130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$lp_mincostflow.coverage" NAME="lp_mincostflow Coverage Results" MODIFIED="1538811118424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/min_cost_flow" />
-    <SUITE FILE_PATH="coverage/3C$task_member_num.coverage" NAME="task_member_num Coverage Results" MODIFIED="1558080033257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
+    <SUITE FILE_PATH="coverage/3C$task_member_num.coverage" NAME="task_member_num Coverage Results" MODIFIED="1558856000388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$task_iteration_num__1_.coverage" NAME="task_iteration_num (1) Coverage Results" MODIFIED="1546845541608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task_range" />
-    <SUITE FILE_PATH="coverage/3C$task_formation_energy.coverage" NAME="task_formation_energy Coverage Results" MODIFIED="1558085948543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
+    <SUITE FILE_PATH="coverage/3C$task_formation_energy.coverage" NAME="task_formation_energy Coverage Results" MODIFIED="1558856132338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$iteration_time.coverage" NAME="iteration_time Coverage Results" MODIFIED="1545199588865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures" />
     <SUITE FILE_PATH="coverage/3C$task_energy_saving__1_.coverage" NAME="task_energy_saving (1) Coverage Results" MODIFIED="1546516306711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
-    <SUITE FILE_PATH="coverage/3C$average_device_energy.coverage" NAME="average_device_energy Coverage Results" MODIFIED="1558079996089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
+    <SUITE FILE_PATH="coverage/3C$average_device_energy.coverage" NAME="average_device_energy Coverage Results" MODIFIED="1558856025752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$task_range_iteration_num.coverage" NAME="task_range_iteration_num Coverage Results" MODIFIED="1547102889666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task_range" />
     <SUITE FILE_PATH="coverage/3C$task_range_member_num.coverage" NAME="task_range_member_num Coverage Results" MODIFIED="1547102893333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task_range" />
     <SUITE FILE_PATH="coverage/3C$Test__1_.coverage" NAME="Test (1) Coverage Results" MODIFIED="1542526638634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$mincostflow_graph.coverage" NAME="mincostflow_graph Coverage Results" MODIFIED="1538984049715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/min_cost_flow" />
-    <SUITE FILE_PATH="coverage/3C$task_energy_saving.coverage" NAME="task_energy_saving Coverage Results" MODIFIED="1558085826580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
+    <SUITE FILE_PATH="coverage/3C$task_energy_saving.coverage" NAME="task_energy_saving Coverage Results" MODIFIED="1558855739968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$Main_task.coverage" NAME="Main_task Coverage Results" MODIFIED="1558013371157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/3C$device_formation_num.coverage" NAME="device_formation_num Coverage Results" MODIFIED="1558080157978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
-    <SUITE FILE_PATH="coverage/3C$device_energy_saving.coverage" NAME="device_energy_saving Coverage Results" MODIFIED="1558085704289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
+    <SUITE FILE_PATH="coverage/3C$device_formation_num.coverage" NAME="device_formation_num Coverage Results" MODIFIED="1558856161208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
+    <SUITE FILE_PATH="coverage/3C$device_energy_saving.coverage" NAME="device_energy_saving Coverage Results" MODIFIED="1558855166548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
     <SUITE FILE_PATH="coverage/3C$CoalitionFormation.coverage" NAME="CoalitionFormation Coverage Results" MODIFIED="1540217868223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$task_iteration_num.coverage" NAME="task_iteration_num Coverage Results" MODIFIED="1558080316028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$Main.coverage" NAME="Main Coverage Results" MODIFIED="1546846748174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/3C$task_formation_num.coverage" NAME="task_formation_num Coverage Results" MODIFIED="1558080137208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
+    <SUITE FILE_PATH="coverage/3C$task_formation_num.coverage" NAME="task_formation_num Coverage Results" MODIFIED="1558856180983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/task" />
     <SUITE FILE_PATH="coverage/3C$Perm.coverage" NAME="Perm Coverage Results" MODIFIED="1541926426346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3C$device_formation.coverage" NAME="device_formation Coverage Results" MODIFIED="1555915157529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures/device" />
     <SUITE FILE_PATH="coverage/3C$task_num.coverage" NAME="task_num Coverage Results" MODIFIED="1546332118196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Figures" />
@@ -53,18 +53,18 @@
       <file leaf-file-name="task_member_num.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Figures/task/task_member_num.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+            <state relative-caret-position="290">
+              <caret line="21" column="92" lean-forward="false" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="device_iteration_num.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Figures/device/device_iteration_num.py">
+      <file leaf-file-name="average_device_energy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Figures/task/average_device_energy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="437">
+              <caret line="21" column="115" lean-forward="false" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
               <folding />
             </state>
           </provider>
@@ -73,8 +73,8 @@
       <file leaf-file-name="device_energy_saving.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Figures/device/device_energy_saving.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="15" column="165" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="165" />
+            <state relative-caret-position="391">
+              <caret line="30" column="62" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -83,8 +83,18 @@
       <file leaf-file-name="task_energy_saving.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Figures/task/task_energy_saving.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="16" column="165" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="165" />
+            <state relative-caret-position="428">
+              <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formation_average_energy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Figures/task/formation_average_energy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="17" column="115" lean-forward="false" selection-start-line="17" selection-start-column="115" selection-end-line="17" selection-end-column="115" />
               <folding />
             </state>
           </provider>
@@ -93,28 +103,18 @@
       <file leaf-file-name="device_member_num.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Figures/device/device_member_num.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+            <state relative-caret-position="483">
+              <caret line="22" column="102" lean-forward="false" selection-start-line="22" selection-start-column="102" selection-end-line="22" selection-end-column="102" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formation_average_energy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Figures/task/formation_average_energy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="20" column="78" lean-forward="false" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="device_formation_energy.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="device_formation_energy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Figures/device/device_formation_energy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+            <state relative-caret-position="520">
+              <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -123,8 +123,8 @@
       <file leaf-file-name="task_formation_energy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Figures/task/task_formation_energy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="96" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="96" />
+            <state relative-caret-position="451">
+              <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -133,8 +133,8 @@
       <file leaf-file-name="task_formation_num.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Figures/task/task_formation_num.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+            <state relative-caret-position="391">
+              <caret line="18" column="116" lean-forward="false" selection-start-line="18" selection-start-column="116" selection-end-line="18" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -143,8 +143,8 @@
       <file leaf-file-name="device_formation_num.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Figures/device/device_formation_num.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            <state relative-caret-position="368">
+              <caret line="17" column="118" lean-forward="false" selection-start-line="17" selection-start-column="118" selection-end-line="17" selection-end-column="118" />
               <folding />
             </state>
           </provider>
@@ -236,17 +236,17 @@
         <option value="$PROJECT_DIR$/User.py" />
         <option value="$PROJECT_DIR$/Execute_task.py" />
         <option value="$PROJECT_DIR$/Execute_device.py" />
-        <option value="$PROJECT_DIR$/Figures/task/average_device_energy.py" />
-        <option value="$PROJECT_DIR$/Figures/task/task_member_num.py" />
-        <option value="$PROJECT_DIR$/Figures/device/device_member_num.py" />
-        <option value="$PROJECT_DIR$/Figures/task/formation_average_energy.py" />
-        <option value="$PROJECT_DIR$/Figures/task/task_formation_num.py" />
-        <option value="$PROJECT_DIR$/Figures/device/device_formation_num.py" />
         <option value="$PROJECT_DIR$/Figures/device/device_iteration_num.py" />
         <option value="$PROJECT_DIR$/Figures/device/device_energy_saving.py" />
         <option value="$PROJECT_DIR$/Figures/task/task_energy_saving.py" />
-        <option value="$PROJECT_DIR$/Figures/task/task_formation_energy.py" />
+        <option value="$PROJECT_DIR$/Figures/device/device_member_num.py" />
+        <option value="$PROJECT_DIR$/Figures/task/task_member_num.py" />
+        <option value="$PROJECT_DIR$/Figures/task/average_device_energy.py" />
         <option value="$PROJECT_DIR$/Figures/device/device_formation_energy.py" />
+        <option value="$PROJECT_DIR$/Figures/task/task_formation_energy.py" />
+        <option value="$PROJECT_DIR$/Figures/device/device_formation_num.py" />
+        <option value="$PROJECT_DIR$/Figures/task/task_formation_num.py" />
+        <option value="$PROJECT_DIR$/Figures/task/formation_average_energy.py" />
       </list>
     </option>
   </component>
@@ -277,6 +277,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -355,8 +357,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -385,7 +385,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.device_formation_energy">
+  <component name="RunManager" selected="Python.formation_average_energy">
+    <configuration default="false" name="device_formation_energy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Figures/device" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="3C" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Figures/device/device_formation_energy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="task_formation_energy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,7 +424,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="device_iteration_num" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="device_formation_num" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -418,32 +437,13 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="3C" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Figures/device/device_iteration_num.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Figures/device/device_formation_num.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="device_energy_saving" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Figures/device" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="3C" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Figures/device/device_energy_saving.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="task_energy_saving" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="task_formation_num" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -456,26 +456,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="3C" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Figures/task/task_energy_saving.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Figures/task/task_formation_num.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="device_formation_energy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="formation_average_energy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Figures/device" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Figures/task" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="3C" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Figures/device/device_formation_energy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Figures/task/formation_average_energy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -631,19 +631,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.task_formation_energy" />
-      <item index="1" class="java.lang.String" itemvalue="Python.device_iteration_num" />
-      <item index="2" class="java.lang.String" itemvalue="Python.device_energy_saving" />
-      <item index="3" class="java.lang.String" itemvalue="Python.task_energy_saving" />
-      <item index="4" class="java.lang.String" itemvalue="Python.device_formation_energy" />
+      <item index="0" class="java.lang.String" itemvalue="Python.device_formation_energy" />
+      <item index="1" class="java.lang.String" itemvalue="Python.task_formation_energy" />
+      <item index="2" class="java.lang.String" itemvalue="Python.device_formation_num" />
+      <item index="3" class="java.lang.String" itemvalue="Python.task_formation_num" />
+      <item index="4" class="java.lang.String" itemvalue="Python.formation_average_energy" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.device_formation_energy" />
-        <item index="1" class="java.lang.String" itemvalue="Python.task_formation_energy" />
-        <item index="2" class="java.lang.String" itemvalue="Python.task_energy_saving" />
-        <item index="3" class="java.lang.String" itemvalue="Python.device_energy_saving" />
-        <item index="4" class="java.lang.String" itemvalue="Python.device_iteration_num" />
+        <item index="0" class="java.lang.String" itemvalue="Python.formation_average_energy" />
+        <item index="1" class="java.lang.String" itemvalue="Python.task_formation_num" />
+        <item index="2" class="java.lang.String" itemvalue="Python.device_formation_num" />
+        <item index="3" class="java.lang.String" itemvalue="Python.task_formation_energy" />
+        <item index="4" class="java.lang.String" itemvalue="Python.device_formation_energy" />
       </list>
     </recent_temporary>
   </component>
@@ -664,17 +664,17 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14392324" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14552239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19934994" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19934994" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -881,7 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1656">
           <caret line="72" column="106" lean-forward="false" selection-start-line="72" selection-start-column="106" selection-end-line="72" selection-end-column="106" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,7 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,96 +916,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Figures/task/average_device_energy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Figures/task/task_member_num.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Figures/device/device_member_num.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Figures/task/formation_average_energy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="20" column="78" lean-forward="false" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Figures/task/task_formation_num.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Figures/device/device_formation_num.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Figures/device/device_iteration_num.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Figures/device/device_energy_saving.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="15" column="165" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="165" />
+        <state relative-caret-position="391">
+          <caret line="30" column="62" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Figures/task/task_energy_saving.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="16" column="165" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="165" />
+        <state relative-caret-position="428">
+          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Figures/task/task_formation_energy.py">
+    <entry file="file://$PROJECT_DIR$/Figures/device/device_member_num.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="96" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="96" />
+        <state relative-caret-position="483">
+          <caret line="22" column="102" lean-forward="false" selection-start-line="22" selection-start-column="102" selection-end-line="22" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Figures/task/task_member_num.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="21" column="92" lean-forward="false" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Figures/task/average_device_energy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="21" column="115" lean-forward="false" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Figures/device/device_formation_energy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        <state relative-caret-position="520">
+          <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Figures/task/task_formation_energy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Figures/device/device_formation_num.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="17" column="118" lean-forward="false" selection-start-line="17" selection-start-column="118" selection-end-line="17" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Figures/task/task_formation_num.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="18" column="116" lean-forward="false" selection-start-line="18" selection-start-column="116" selection-end-line="18" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Figures/task/formation_average_energy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="17" column="115" lean-forward="false" selection-start-line="17" selection-start-column="115" selection-end-line="17" selection-end-column="115" />
           <folding />
         </state>
       </provider>

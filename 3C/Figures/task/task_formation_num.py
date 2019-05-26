@@ -16,7 +16,7 @@ width = total_width / n
 x = x - (total_width - width) / size
 
 plt.bar(x, CF, width=width, label='F3C algorithm')
-plt.bar(x+width, RandomFormation, width=width,  label='Random formation strategy',tick_label = task_num)
+plt.bar(x+width, RandomFormation, width=width,  label='Random formation strategy',tick_label = task_num,hatch='////')
 plt.bar(x+2*width, GreedyFormation, width=width, label='Greedy formation strategy strategy')
 
 

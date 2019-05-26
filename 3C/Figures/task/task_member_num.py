@@ -18,8 +18,8 @@ width = total_width / n
 x = x - (total_width - width) / size
 
 plt.bar(x, Edge_CoCaCo, width=width, label='Edge-CoCaCo strategy')
-plt.bar(x+width, non_cooperation, width=width, label='Non-cooperation strategy')
-plt.bar(x+2*width, CF, width=width,  label='F3C algorithm',tick_label = task_num)
+plt.bar(x+width, non_cooperation, width=width, label='Non-cooperation strategy',hatch='////')
+plt.bar(x+2*width, CF, width=width,  label='F3C algorithm',tick_label = task_num,hatch='....')
 plt.bar(x+3*width, non_overlap_BruteGreedy, width=width, label='Non-overlapping Brute Greedy strategy')
 
 

@@ -18,8 +18,8 @@ width = total_width / n
 x = x - (total_width - width) / size
 
 plt.bar(x, non_overlap_BruteGreedy, width=width, label='Non-overlapping Brute Greedy strategy')
-plt.bar(x+width, CoalitionFormation, width=width,  label='F3C algorithm')
-plt.bar(x+2*width, Non_cooperation, width=width, label='Non-cooperation strategy',tick_label = task_num)
+plt.bar(x+width, CoalitionFormation, width=width,  label='F3C algorithm',hatch='////')
+plt.bar(x+2*width, Non_cooperation, width=width, label='Non-cooperation strategy',tick_label = task_num,hatch='....')
 plt.bar(x+3*width, Edge_CoCaCo, width=width, label='Edge-CoCaCo strategy')
 
 plt.ylabel(r"Average device energy consumption ($\times 10^{10}$)",fontsize=15)

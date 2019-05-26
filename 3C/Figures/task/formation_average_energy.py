@@ -15,7 +15,7 @@ width = total_width / n
 x = x - (total_width - width) / size
 
 plt.bar(x, CoalitionFormation, width=width,  label='F3C algorithm')
-plt.bar(x+width, GreedyFormation, width=width, label='Greedy formation strategy',tick_label = task_num)
+plt.bar(x+width, GreedyFormation, width=width, label='Greedy formation strategy',tick_label = task_num,hatch='////')
 plt.bar(x+2*width, RandomFormation, width=width, label='Random formation strategy')
 
 plt.ylabel(r"Average device energy consumption ($\times 10^{12}$)",fontsize=15)
